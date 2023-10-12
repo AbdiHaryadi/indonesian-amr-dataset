@@ -1,79 +1,94 @@
 # ::id 1
-# ::snt Balon itu  ditiup  Ilham
-( t / tiup 
-	:ARG0 ( i / ilham )
-	:ARG1 ( b / balon )
-)
+# ::snt Balon itu ditiup Ilham
+( t / tiup-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Ilham" ) )
+	:ARG1 ( b / balon
+		:mod i / itu ) )
 
 # ::id 2
 # ::snt Obe menulis puisi
-( t / tulis
-	:ARG0 ( o / obe )
-	:ARG1 ( p / puisi)
-)
-
-# ::id 2
-# ::snt Saya mengetik makalah
-( k / ketik 
-	:ARG0 ( s / saya)
-	:ARG1 ( m / makalah)
-)
-
-# ::id 2
-# ::snt Angga Anak Ajaib
-( a1 / angga 
-	:mod ( a2 / anak
-		:mod ( a3 / ajaib )))
-
-# ::id 2
-# ::snt Ibuku seorang dosen
-( o / orang 
-	:ARG0 ( i / ibu)
-	:ARG1 ( d / dosen))
-
-# ::id 2
-# ::snt Dia Sedang berenang
-( r / renang
-	:ARG0 ( d / dia ))
-
-# ::id 2
-# ::snt Ilham sedang mencari bukunya yang hilang
-( c / cari
-	:ARG0 ( i / ilham)
-	:ARG1 ( b / buku 
-		:mod ( h / hilang ))
-)
-
-# ::id 2
-# ::snt Ibu Sedang menyapu halaman rumah
-( s / sapu
-	:ARG0 ( i / ibu)
-	:location ( h / halaman 
-		:mod ( r / rumah )))
+( t / tulis-02
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Obe" ) )
+	:ARG1 ( p / puisi ) )
 
 # ::id 3
+# ::snt Saya mengetik makalah
+( t / tik-01 
+	:ARG0 ( a / aku )
+	:ARG1 ( m / makalah ) )
+
+# ::id 4
+# ::snt Angga Anak Ajaib
+( a / anak
+	:domain ( o / orang
+		:wiki -
+		:name ( n / nama 
+			:op1 "Angga" ) )
+	:mod ( a2 / ajaib ) )
+
+# ::id 5
+# ::snt Ibuku seorang dosen
+( d / dosen
+	:domain ( i / ibu
+		:poss ( a / aku ) ) )
+
+# ::id 6
+# ::snt Dia Sedang berenang
+( r / renang-01
+	:ARG0 ( d / dia ) )
+
+# ::id 7
+# ::snt Ilham sedang mencari bukunya yang hilang
+( c / cari-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Ilham" ) )
+	:ARG1 ( b / buku
+		:poss o
+		:ARG1-of ( h / hilang-01 ))
+)
+
+# ::id 8
+# ::snt Ibu Sedang menyapu halaman rumah
+( s / sapu-01
+	:ARG0 ( i / ibu )
+	:ARG1 ( h / halaman 
+		:part ( r / rumah ) ) )
+
+# ::id 9
 # ::snt Ayah sedang membajak padi di sawah
-( b / bajak
+( b / bajak-01
 	:ARG0 ( a / ayah )
 	:ARG1 ( p / padi )
-	:location ( s / sawah ))
+	:location ( s / sawah ) )
 
-# ::id 2
+# ::id 10
 # ::snt Andi pergi berkemah di tepi Pantai
-( p1 / pergi 
-	:ARG0 ( a / andi )
-	:ARG1 ( k / kemah)
-	:location ( t / tepi 
-		:mod ( p2 / pantai ))
-)
+( p / pergi-02
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Andi" ) )
+	:ARG1 ( k / kemah-01
+		:location ( t / tepi
+			:part ( p2 / pantai ) ) ) )
 
-# ::id 2
+# ::id 11
 # ::snt Angga pergi ke toko buku
-( p / pergi 
-	:ARG0 ( a / angga)
-	:location ( t / toko 
-		:mod ( b / buku ))
-)
+( p / pergi-01 
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Angga" ) )
+	:ARG1 ( t / toko 
+		:mod ( b / buku ) ) )
 
 # ::id 2
 # ::snt Saya masih ada di rumah
