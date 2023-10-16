@@ -200,185 +200,222 @@
 	:ARG2 ( a / adik
 		:poss o ) )
 
-# ::id 2
+# ::id 24
 # ::snt Pak Hasan bertemu dengan Pak Husen kemarin di halte bus
-( t / temu 
-	:ARG0 ( p1 / pak 
-		:name ( h1 / hasan ))
-	:ARG1 ( p2 / pak 
-		:name ( h2 / husen ))
+( t / temu-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Hasan") )
+	:ARG1 ( o2 / orang
+		:wiki -
+		:name ( n2 / nama
+			:op1 "Pak"
+			:op2 "Husen"))
 	:time ( k / kemarin )
-	:location ( h / halte 
-		:mod ( b / bus ))
-)
+	:location ( h / halte
+		:mod ( b / bus ) ) )
 
-# ::id 2
+# ::id 25
 # ::snt Uang Maman jatuh ke selokan
-( j / jatuh
-	:ARG0 ( u / uang 
-		:mod ( m / maman ))
-	:location ( s / selokan )
-)
+( j / jatuh-01
+	:ARG1 ( u / uang
+		:poss ( o / orang
+			:wiki -
+			:name ( n / nama
+				:op1 "Maman" ) ) )
+	:destination ( s / selokan ) )
 
-# ::id 2
+# ::id 26
 # ::snt Yusron sedang menyapu halaman
-( s / sapu 
-	:ARG0 ( y / yusron )
-	:ARG1 ( h / halaman )
-)
+( s / sapu-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Yusron" ) )
+	:ARG1 ( h / halaman ) )
 
-# ::id 2
+# ::id 27
 # ::snt Dona adalah siswa berprestasi di kampusku
-( s / siswa 
-	:ARG0 ( d / dona )
-	:mod ( p / prestasi )
-	:location ( k / kampus )
-)
+( s / siswa
+	:domain ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Dona" ) )
+	:ARG0-of ( m / milik-01
+		:ARG1 ( p / prestasi ) )
+	:location ( k / kampus
+		:poss ( a / aku ) ) )
 
-# ::id 2
+# ::id 28
 # ::snt Caca menulis status fb
-( t / tulis
-	:ARG0 ( c / caca)
-	:ARG1 ( s / status 
-		:mod ( f / fb ))
-)
+( t / tulis-02
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Caca" ) )
+	:ARG1 ( s / status
+		:mod ( p / produk
+			:wiki "Facebook"
+			:name ( n2 / nama
+				:op1 "fb" ) ) ) )
 
-# ::id 2
+# ::id 29
 # ::snt Ranti berjalan dengan pelan
-( j / jalan
-	:ARG0 ( r / ranti )
-	:mod ( p / pelan )
-)
+( j / jalan-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Ranti" ) )
+	:manner ( p / pelan ) )
 
-# ::id 2
+# ::id 30
 # ::snt Pak Andre memecahkan gelas dengan sengaja
-( p1 / pecah 
-	:ARG0 ( p2 / pak 
-		:name ( a / andre ))
+( p / pecah-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Andre" ) )
 	:ARG1 ( g / gelas )
-	:mod ( s / sengaja )
-)
+	:manner ( s / sengaja ) )
 
-# ::id 2
+# ::id 31
 # ::snt Pak Amir bermain basket di lapangan
-( m / main 
-	:ARG0 ( p / pak 
-		:name ( a / amir ))
-	:ARG1 ( b / basket)
-	:location ( l / lapangan )
-)
+( m / main-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Amir" ) )
+	:ARG1 ( b / basket )
+	:location ( l / lapangan ) )
 
-# ::id 2
+# ::id 32
 # ::snt Paman mengunjungi ayah kemarin
-( k1 / kunjung 
+( k / kunjung-01
 	:ARG0 ( p / paman )
 	:ARG1 ( a / ayah )
-	:time ( k2 / kemarin )
-)
+	:time ( k2 / kemarin ) )
 
-# ::id 2
+# ::id 33
 # ::snt Ibu menjahit baju dengan rapi
-( j / jahit 
-	:ARG0 ( i / ibu)
-	:ARG1 ( b / baju)
-	:mod ( r / rapi)
-)
+( j / jahit-01 
+	:ARG0 ( i / ibu )
+	:ARG1 ( b / baju )
+	:manner ( r / rapi-01 ) )
 
-# ::id 2
+# ::id 34
 # ::snt Rini menulis surat dengan komputer
-( t / tulis 
-	:ARG0 ( r / rini)
-	:ARG1 ( s / surat)
-	:mod ( k / komputer )
-)
+( t / tulis-02 
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Rini" ) )
+	:ARG1 ( s / surat )
+	:instrument ( k / komputer ) )
 
-# ::id 2
+# ::id 35
 # ::snt Dina menulis puisi untuk ibunda di beranda pada malam hari
-( t /tulis
-	:ARG0 ( d / diana)
-	:ARG1 ( p / puisi)
-	:mod ( i / ibunda)
+( t / tulis-02
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Dina" ) )
+	:ARG1 ( p / puisi )
+	:beneficiary ( i / ibu )
 	:location ( b / beranda )
-	:time ( m / malam 
-		:mod ( h / hari ))
-)
+	:time ( m / malam ) )
 
-# ::id 2
+# ::id 36
 # ::snt Adik berlari dengan sangat kencang
-( l / lari 
-	:ARG0 ( a/adik )
-	:mod ( k / kencang 
-		:mod ( s / sangat ))
-)
+( l / lari-01 
+	:ARG0 ( a / adik )
+	:manner ( c / cepat-01
+		:degree ( s / sangat ) ) )
 
-# ::id 2
+# ::id 37
 # ::snt Wahyu pergi ke warung
-(p / pergi 
-	:ARG0 ( w1 / wahyu)
-	:location ( w2 / warung )
-)
+( p / pergi-01 
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Wahyu" ) )
+	:ARG1 ( w / warung ) )
 
-# ::id 2
+# ::id 38
 # ::snt Anita sedang membuat roti
-( b / buat 
-	:ARG0 ( a / anita)
-	:ARG1 ( r / roti )
-)
+( b / buat-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Anita" ) )
+	:ARG1 ( r / roti ) )
 
-# ::id 2
+# ::id 39
 # ::snt Singa mengintai mangsanya
-( i / intai 
+( i / intai-01 
 	:ARG0 ( s / singa )
-	:ARG1 ( m / mangsa )
-)
+	:ARG1 ( m / mangsa
+		:poss s ) )
 
-# ::id 2
+# ::id 40
 # ::snt Mobil itu melaju dengan sangat cepat
-( l / laju 
-	:ARG0 ( m / mobil)
-	:mod ( c / cepat   
-		:mod ( s / sangat ))
-)
+( g / gerak-01
+	:ARG1 ( m / mobil
+		:mod ( i / itu ) )
+	:manner ( c / cepat-01
+		:degree ( s / sangat ) ) )
 
-# ::id 2
+# ::id 41
 # ::snt Kakek sebelah rumahku sangat pemarah
-( m / marah 
-	:ARG0 ( k / kakek)
-	:location ( s1 / sebelah 
-		:ARG0 ( r / rumah ))
-	:mod ( s2 / sangat )
-)
+( m / marah-01
+	:ARG0 ( k / kakek
+		:location ( s / samping
+			:part ( r / rumah
+				:poss ( a / aku ) ) ) )
+	:degree ( s2 / sangat ) )
 
-# ::id 2
+# ::id 42
 # ::snt Romeo tampan dengan setelan jas itu
-( t / tampan 
-	:ARG0 ( r / romeo )
-	:mod ( s / setel 
-		:mod ( j / jas ))
-)
+( t / tampan-01
+	:ARG0 ( s / setel
+		:mod ( j / jas )
+		:mod ( i / itu ) )
+	:ARG1 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Romeo" ) ) )
 
-# ::id 2
+# ::id 43
 # ::snt Arsita terlihat begitu anggun dengan gaunnya
-( l / lihat 
-	:ARG0 ( a1 / arsita)
-	:ARG1 ( a2 / anggun )
-	:mod ( g / gaun )
-)
+( l / lihat-01
+	:ARG1 ( a / anggun
+		:ARG0 ( g / gaun
+			:poss ( o / orang
+				:wiki -
+				:name ( n / nama
+					:op1 "Arsita" ) ) )
+		:ARG1 o ) )
 
-# ::id 2
+# ::id 44
 # ::snt Cecep adalah pembohong
-( b / bohong
-	:ARG0 ( c / cecep)
-)
+( b / bohong-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Cecep" ) ) )
 
-# ::id 2
+# ::id 45
 # ::snt Irawan sangat baik hati kepada siapa saja
-( b / baik 
-	:ARG0 ( i / irawan )
-	:mod ( h / hati )
-	:ARG1 ( s1 / siapa 
-		:mod ( s2 / saja ))
-)
+( b / baik-hati-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Irawan" ) )
+	:ARG1 ( o2 / orang
+		:mod ( s / semua ) ) )
 
 # ::id 2
 # ::snt Dudung sangat pendiam di sekolahnya
