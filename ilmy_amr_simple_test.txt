@@ -6,7 +6,7 @@
 		:name ( n / nama
 			:op1 "Ilham" ) )
 	:ARG1 ( b / balon
-		:mod i / itu ) )
+		:mod ( i / itu ) ) )
 
 # ::id 2
 # ::snt Obe menulis puisi
@@ -417,58 +417,70 @@
 	:ARG1 ( o2 / orang
 		:mod ( s / semua ) ) )
 
-# ::id 2
+# ::id 46
 # ::snt Dudung sangat pendiam di sekolahnya
-( d1 / diam 
-	:mod ( s1 / sangat )
-	:ARG0 ( d2 / dudung )
-	:location ( s2 / sekolah )
-)
+( d / diam-01
+	:ARG1 ( o / orang
+		:name ( n / nama
+			:op1 "Dudung" ) )
+	:location ( s / sekolah
+		:poss o )
+	:manner ( s2 / sering
+		:degree ( s3 / sangat ) ) )
 
-# ::id 2
+# ::id 47
 # ::snt Kucing hitam itu sangat menakutkan
-( t / takut 
+( t / takut-01 
 	:ARG0 ( k / kucing 
-		:mod ( h / hitam ))
-	:mod ( s / sangat )
-)
+		:ARG1-of ( h / hitam-01 ) )
+	:degree ( s / sangat ) )
 
-# ::id 2
+# ::id 48
 # ::snt Ibuku adalah orang yang sangat penyayang
-( a / adalah 
-	:ARG0 ( i / ibu)
-	:ARG1 ( s1 / sayang 
-		:mod ( s2 / sangat ))
-)
+( s / sayang-01
+	:ARG0 ( i / ibu
+		:poss ( a / aku ) )
+	:manner ( s2 / sering
+		:degree ( s3 / sangat ) ) )
 
-# ::id 2
+# ::id 49
 # ::snt Mirna membersihkan kacamatanya dengan selembar tisu basah
-( b1 / bersih
-	:ARG0 ( m / mirna )
-	:ARG1 ( k / kacamata )
-	:mod ( t / tisu 
-		:mod ( l / lembar)
-		:mod ( b2 / basah ))
-)
+( b / bersih-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Mirna" ) )
+	:ARG1 ( k / kacamata
+		:poss o )
+	:instrument ( l / lembar
+		:quant 1
+		:mod ( t / tisu
+			:ARG1-of ( b2 / basah-01 ) ) ) )
 
-# ::id 2
+# ::id 50
 # ::snt Jesica menyeduhkan kopi kesukaan ayahnya
-( s1 / seduh 
-	:ARG0 ( j / jessica )
-	:ARG1 ( k / kopi 
-		:mod( s2 / suka 
-			:ARG0 ( a1 / ayah )))
-)
+( s / seduh-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Jesica" ) )
+	:ARG1 ( k / kopi
+		:ARG1-of ( s2 / suka-01
+			:ARG0 ( a / ayah
+				:poss o ) ) ) )
 
-# ::id 2
+# ::id 51
 # ::snt Paman membelikanku novel Sherlock Holmes edisi terbaru
-( b1 / beli 
+( b / beli-01
 	:ARG0 ( p / paman )
-	:ARG1 ( n / novel 
-		:name ( s / sherlock 
-			:name ( h / holmes )))
-	:mod ( b2 / baru )
-)
+	:ARG1 ( n / novel
+		:wiki -
+		:name ( n2 / nama
+			:op1 "Sherlock"
+			:op2 "Holmes" )
+		:ARG1-of ( t / terbit-03
+			:ARG1-of ( m / memiliki-derajat-91
+				:ARG2 ( b2 / baru )
+				:ARG3 ( p2 / paling ) ) ) )
+	:beneficiary ( a / aku ) )
 
 # ::id 2
 # ::snt Pemulung itu memunguti sampah yang bisa didaur ulang
