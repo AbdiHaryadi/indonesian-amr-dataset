@@ -90,113 +90,115 @@
 	:ARG1 ( t / toko 
 		:mod ( b / buku ) ) )
 
-# ::id 2
+# ::id 12
 # ::snt Saya masih ada di rumah
-( a / ada 
-	:ARG0 ( s / saya )
-	:mod ( m / masih )
-	:location ( r / rumah )
-)
+( a / aku
+	:location ( r / rumah ) )
 
-# ::id 2
+# ::id 13
 # ::snt Ayah sekarang ada di pasar
-( a1 / ada 
-	:ARG0 ( a2 / ayah )
+( a / ayah
 	:time ( s / sekarang )
 	:location ( p / pasar )
 )
 
-# ::id 2
+# ::id 14
 # ::snt Kakak masih bermain bola
-( m1 / main
+( m / main-01
 	:ARG0 ( k / kakak )
 	:ARG1 ( b / bola )
-	:mod ( m / masih )
 )
 
-# ::id 2
+# ::id 15
 # ::snt Ada banyak tikus di rumah
-( a / ada
-	:ARG0 ( t / tikus 
-		:mod ( b / banyak ))
-	:location ( r / rumah)
-)
+( t / tikus
+	:location ( r / rumah )
+	:mod ( b / banyak ) )
 
-# ::id 2
+# ::id 16
 # ::snt Adik menangis keras karena jatuh
-( t / tangis
+( t / tangis-01
 	:ARG0 ( a / adik )
-	:mod ( k / keras 
-		:mod ( j / jatuh ))
-)
+	:mod ( k / keras )
+	:cause ( j / jatuh-01
+		:ARG1 a ) )
 
-# ::id 2
+# ::id 17
 # ::snt Hotel itu sangat mewah seperti istana
-( s2 / seperti 
-	:ARG0 (h / hotel
-		:mod ( m / mewah 
-			:mod ( s1 / sangat)))
-	:ARG1 ( i / istana )
-)
+( m / mewah-01
+	:ARG1 ( h / hotel
+		:mod ( i / itu ) )
+	:degree ( s / sangat )
+	:ARG2-of ( m / memiliki-derajat-91
+		:ARG1 h
+		:ARG3 ( s2 / seperti )
+		:ARG4 ( i2 / istana ) ) )
 
-# ::id 2
+# ::id 18
 # ::snt Sisa uang yang aku miliki saat ini hanya berjumlah sepuluh ribu rupiah
-( m / milik 
-	:ARG0 ( a / aku )
-	:ARG1 ( s1 / sisa
-		:mod ( u / uang ))
-	:mod ( j / jumlah 
-		:mod ( s2 / sepuluh 
-			:mod ( r1 / ribu 
-				:mod ( r2 / rupiah ))))
-)
+( m / memiliki-kuant-91
+	:ARG1 ( u / uang
+		:poss ( a / aku )
+		:ARG1-of ( s / sisa-01 ) )
+	:ARG2 ( k / kuantitas-moneter
+		:quant 10000
+		:unit ( r / rupiah ) ) )
 
-# ::id 2
+# ::id 19
 # ::snt Jarak sekolah dan rumahku tidak terlalu jauh
-( j1 / jarak
-	:ARG0 ( s / sekolah )
-	:ARG1 ( r / rumah )
-	:mod ( t1 / tidak
-		:mod ( t2 / terlalu 
-			:mod ( j2 / jauh )))
-)
+( j / jauh-01
+	:ARG1 ( s / sekolah
+		:poss ( a / aku ) )
+	:ARG2 ( r / rumah
+		:poss a )
+	:degree ( t / terlalu
+		:polarity - ) )
 
-# ::id 2
+# ::id 20
 # ::snt Perampok itu merampok korbannya dengan sangat kejam
-( r1 / rampok 
-	:ARG0 ( r2 / rampok )
-	:ARG1 ( k1 / korban )
-	:mod ( k2 / kejam 
-		:mod ( s / sangat ))
-)
+( r / rampok-01
+	:ARG0 ( o / orang
+		:mod ( i / itu ) )
+	:ARG1 ( k / korban
+		:poss o )
+	:manner ( k2 / kejam
+		:degree ( s / sangat ) ) )
 
-# ::id 2
+# ::id 21
 # ::snt Pak Roni berangkat ke Bandung besok
-( b1 / berangkat
-	:ARG0 ( p / pak 
-		:name ( r / roni ))
-	:location ( b2 / bandung)
-	:time ( b3 / besok )
-)
+( p / pergi-03
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Roni" ) )
+	:ARG1 ( k / kota
+		:wiki "Kota_Bandung"
+		:name ( n2 / nama
+			:op1 "Bandung" ) )
+	:time ( b / besok ) )
 
-# ::id 2
+# ::id 22
 # ::snt Bu Cinta berangkat ke sekolah menggunakan taksi
-( b1 / berangkat
-	:ARG0 ( b2 / bu 
-		:name ( c / cinta ))
-	:location ( s / sekolah )
-	:mod ( g / guna 
-		:ARG1 ( t / taksi ))
-)
+( p / pergi-03
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Bu"
+			:op2 "Cinta" ) )
+	:ARG1 ( s / sekolah )
+	:manner ( t / taksi ) )
 
-# ::id 2
+# ::id 23
 # ::snt Satria memberikan uang kepada adiknya
-( b / beri 
-	:ARG0 ( s / satria )
+( b / beri-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Satria" ) )
 	:ARG1 ( u / uang )
-	:mod ( k / kepada 
-		:mod ( a / adik ))
-)
+	:ARG2 ( a / adik
+		:poss o ) )
 
 # ::id 2
 # ::snt Pak Hasan bertemu dengan Pak Husen kemarin di halte bus
