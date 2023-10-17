@@ -421,6 +421,7 @@
 # ::snt Dudung sangat pendiam di sekolahnya
 ( d / diam-01
 	:ARG1 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Dudung" ) )
 	:location ( s / sekolah
@@ -447,12 +448,12 @@
 # ::snt Mirna membersihkan kacamatanya dengan selembar tisu basah
 ( b / bersih-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Mirna" ) )
 	:ARG1 ( k / kacamata
 		:poss o )
 	:instrument ( l / lembar
-		:quant 1
 		:mod ( t / tisu
 			:ARG1-of ( b2 / basah-01 ) ) ) )
 
@@ -460,6 +461,7 @@
 # ::snt Jesica menyeduhkan kopi kesukaan ayahnya
 ( s / seduh-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Jesica" ) )
 	:ARG1 ( k / kopi
@@ -482,86 +484,104 @@
 				:ARG3 ( p2 / paling ) ) ) )
 	:beneficiary ( a / aku ) )
 
-# ::id 2
+# ::id 52
 # ::snt Pemulung itu memunguti sampah yang bisa didaur ulang
-( p1 / pungut 
-	:ARG0 ( p / pulung )
-	:ARG1 ( s / sampah 
-		:mod ( b / bisa 
-			:mod ( d / daur 
-				:mod ( u / ulang )))))
+( p / pungut-01
+	:ARG0 ( o / orang 
+		:ARG0-of ( p2 / pulung-01 )
+		:mod ( i / itu ) )
+	:ARG1 ( s / sampah
+		:ARG1-of ( d / daur-ulang-01
+			:ARG0 o
+			:ARG1-of ( b / bisa-01
+				:ARG0 o ) ) ) )
 
-# ::id 2
+# ::id 53
 # ::snt Weni membantu ayahnya memanen buah apel di kebun miliknya
-( b1 / bantu 
-	:ARG0 ( w / weni )
-	:ARG1 ( a1 / ayah )
-	:mod ( p / panen 
-		:ARG1 ( b2 / buah 
-			:mod ( a2 / apel )))
-	:location ( k / kebun 
-		:mod ( m / milik ))
-)
+( b / bantu-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Weni" ) )
+	:ARG1 ( p / panen-01
+		:ARG0 ( a / ayah
+			:poss o ) )
+		:ARG1 ( a2 / apel )
+		:location ( k / kebun
+			:poss a )
+	:location k )
 
-# ::id 2
+# ::id 54
 # ::snt Ibu sedang mencuci piring
-( c / cuci 
-	:ARG0 ( i / ibu)
-	:ARG1 ( p / piring)
-)
+( c / cuci-01
+	:ARG0 ( i / ibu )
+	:ARG1 ( p / piring ) )
 
-# ::id 2
+# ::id 55
 # ::snt Devis bermain bola kaki sampai sore
-( m / main 
-	:ARG0 ( d / devis )
-	:ARG1 ( b / bola 
-		:mod ( k / kaki ))
-	:time ( s1 / sampai 
-		:mod ( s / sore ))
-)
+( m / main-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Devis" ) )
+	:ARG1 ( b / bola
+		:mod ( k / kaki ) )
+	:time ( s / sore ) )
 
-# ::id 2
+# ::id 56
 # ::snt Sabrina mencari bukunya yang terselip
-( c / cari 
-	:ARG0 ( s1 / sabrina )
-	:ARG1 ( b / buku 
-		:mod ( s2 / selip))
-)
+( c / cari-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Sabrina" ) )
+	:ARG1 ( b / buku
+		:poss o
+		:ARG1-of ( s / selip-01 ) ) )
 
-# ::id 2
+# ::id 57
 # ::snt Kami pergi berkemah di Gunung Semeru
-( p / pergi 
-	:ARG0 ( k1 / kami )
-	:mod ( k2 / kemah )
-	:location ( g / gunung 
-		:name ( s / semeru ))
-)
+( p / pergi-02
+	:ARG0 ( k / kami )
+	:ARG1 ( k2 / kemah-01
+		:location ( g / gunung
+			:wiki "Gunung_Semeru"
+			:name ( n / nama
+				:op1 "Gunung"
+				:op2 "Semeru" ) ) ) )
 
-# ::id 2
+# ::id 58
 # ::snt Bu Septia menunggang kerbau
-( t / tunggang 
-	:ARG0 ( b / bu 
-		:name (s / septia ))
-	:ARG1 ( k / kerbau )
-)
+( t / tunggang-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Bu"
+			:op2 "Septia" ) )
+	:ARG1 ( k / kerbau ) )
 
-# ::id 2
+# ::id 59
 # ::snt Siska berteriak di kejauhan
-( t / teriak 
-	:ARG0 ( s / siska )
-	:location ( j / jauh )
-)
+( t / teriak-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Siska" ) )
+	:location ( l / lokasi
+		:ARG1-of ( j / jauh-01 ) ) )
 
-# ::id 2
+# ::id 60
 # ::snt Santoso menjahit celana
-( j / jahit
-	:ARG0 ( s / santoso )
-	:ARG1 ( c / celana )
-)
+( j / jahit-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Santoso" ) )
+	:ARG1 ( c / celana ) )
 
-# ::id 2
+# ::id 61
 # ::snt Dia melamunkan seseorang
-( l / lamun 
+( l / lamun-01
 	:ARG0 ( d / dia )
 	:ARG1 ( o / orang )
 )
