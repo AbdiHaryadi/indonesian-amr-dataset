@@ -129,7 +129,7 @@
 	:ARG1 ( h / hotel
 		:mod ( i / itu ) )
 	:degree ( s / sangat )
-	:ARG2-of ( m / memiliki-derajat-91
+	:ARG2-of ( m2 / memiliki-derajat-91
 		:ARG1 h
 		:ARG3 ( s2 / seperti )
 		:ARG4 ( i2 / istana ) ) )
