@@ -529,7 +529,8 @@
 			:op1 "Devis" ) )
 	:ARG1 ( b / bola
 		:mod ( k / kaki ) )
-	:time ( s / sore ) )
+	:time ( s / sampai
+		:op1 ( s / sore ) ) )
 
 # ::id 56
 # ::snt Sabrina mencari bukunya yang terselip
