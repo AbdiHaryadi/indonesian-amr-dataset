@@ -92,28 +92,31 @@
 
 # ::id 12
 # ::snt Saya masih ada di rumah
-( a / aku
-	:location ( r / rumah ) )
+( t / terletak-di-91
+	:ARG1 ( a / aku )
+	:ARG2 ( r / rumah )
+	:mod ( m / masih ) )
 
 # ::id 13
 # ::snt Ayah sekarang ada di pasar
-( a / ayah
-	:time ( s / sekarang )
-	:location ( p / pasar )
-)
+( t / terletak-di-91
+	:ARG1 ( a / ayah )
+	:ARG2 ( p / pasar )
+	:time ( s / sekarang ) )
 
 # ::id 14
 # ::snt Kakak masih bermain bola
 ( m / main-01
 	:ARG0 ( k / kakak )
 	:ARG1 ( b / bola )
-)
+	:mod ( m2 / masih ) )
 
 # ::id 15
 # ::snt Ada banyak tikus di rumah
-( t / tikus
-	:location ( r / rumah )
-	:mod ( b / banyak ) )
+( t / terletak-di-91
+	:ARG1 ( t2 / tikus
+		:mod ( b / banyak ) )
+	:ARG2 ( r / rumah ) )
 
 # ::id 16
 # ::snt Adik menangis keras karena jatuh
