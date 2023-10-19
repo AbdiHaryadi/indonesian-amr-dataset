@@ -633,6 +633,7 @@
 # ::snt Anggi membeli kue di toko
 ( b / beli-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Anggi" ) )
 	:ARG1 ( k / kue )
@@ -642,6 +643,7 @@
 # ::snt Riko menonton TV di ruang tamu
 ( t / tonton-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Riko" ) )
 	:ARG1 ( t / televisi )
@@ -652,6 +654,7 @@
 # ::snt Bu Via menyanyikan lagu dengan semangat
 ( n / nyanyi-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n2 / nama
 			:op1 "Bu"
 			:op2 "Via" ) )
@@ -662,6 +665,7 @@
 # ::snt Wawan menyalakan lampu di depan rumah
 ( n / nyala-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Wawan" ) )
 	:ARG1 ( l / lampu )
@@ -672,6 +676,7 @@
 # ::snt Yasmin membuang sampah di tempat sampah
 ( b / buang-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Yasmin" ) )
 	:destination ( t / tempat
@@ -681,6 +686,7 @@
 # ::snt Rina bertemu temannya tadi malam
 ( t / temu-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Rina" ) )
 	:ARG1 ( t2 / teman
@@ -693,6 +699,7 @@
 # ::snt Indah memakan bekalnya dengan lahap
 ( m / makan-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Indah" ) )
 	:ARG1 ( b / bekal
@@ -703,6 +710,7 @@
 # ::snt Paul mematikan komputernya lima menit yang lalu
 ( m / mati-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Paul" ) )
 	:ARG1 ( k / komputer
@@ -717,6 +725,7 @@
 # ::snt Pak Sutejo menanam padi di sawah
 ( t / tanam-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Pak"
 			:op2 "Sutejo" ) )
@@ -727,6 +736,7 @@
 # ::snt Karni membacakan orasi di atas panggung
 ( b / baca-02
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Karni" ) )
 	:ARG1 ( o2 / orasi )
@@ -737,6 +747,7 @@
 # ::snt Tata membeli baju mahal itu di mall
 ( b / beli-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Tata" ) )
 	:ARG1 ( b2 / baju )
@@ -754,6 +765,7 @@
 # ::snt Riana makan nasi goreng
 ( m / makan-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Riana" ) )
 	:ARG1 ( n2 / nasi
@@ -763,6 +775,7 @@
 # ::snt Citra sedang membaca buku
 ( b / baca-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Citra" ) )
 	:ARG1 ( b / buku ) )
@@ -778,6 +791,7 @@
 # ::snt Joko membeli bahan makanan
 ( b / beli-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama )
 			:op1 "Joko" )
 	:ARG1 ( b2 / bahan
@@ -788,6 +802,7 @@
 # ::snt Dik Dina melihat pemandangan pantai
 ( l / lihat-01
 	:ARG0 ( o / orang
+		:wiki -
 		:name ( n / nama
 			:op1 "Dik"
 			:op2 "Dina" ) )
@@ -799,7 +814,6 @@
 ( p / pancing-01
 	:ARG0 ( n / nelayan )
 	:ARG1 ( i / ikan ) )
-
 
 # ::id 83
 # ::snt Kucing itu berburu mangsa
@@ -815,21 +829,29 @@
 	:ARG0-of ( t / tendang-01
 		:ARG1 ( b / bola ) ) )
 
-# ::id 2
+# ::id 85
 # ::snt Mey meminum minuman itu
-( m1 / minum 
-	:ARG0 ( m2 / mey )
-	:ARG1 ( m3 / minuman )
-)
+( m / minum-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Mey" ) )
+	:ARG1 ( p / produk
+		:mod ( i / itu ) ) )
 
-# ::id 2
+# ::id 86
 # ::snt Suster Ayu suka menonton drama Korea
-( t / tonton 
+( s / suka-01
 	:ARG0 ( s / suster
-		:name ( a / ayu ))
-	:ARG1 ( d / drama 
-		:mod ( k / korea ))
-)
+		:wiki -
+		:name ( n / nama
+			:op1 "Ayu" ) )
+	:ARG1 ( t / tonton-01
+		:ARG1 ( p / program-siaran
+			:wiki "Drama_Korea"
+			:name ( n / nama
+				:op1 "drama"
+				:op2 "Korea" ) ) ) )
 
 # ::id 2
 # ::snt Bapak Rian sedang mencari nafkah
