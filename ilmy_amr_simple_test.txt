@@ -293,7 +293,8 @@
 			:op1 "Pak"
 			:op2 "Amir" ) )
 	:ARG1 ( b / basket )
-	:location ( l / lapangan ) )
+	:location ( l / lokasi
+		:ARG1-of ( l2 / lapang-01 ) ) )
 
 # ::id 32
 # ::snt Paman mengunjungi ayah kemarin
@@ -329,7 +330,8 @@
 	:ARG1 ( p / puisi )
 	:beneficiary ( i / ibu )
 	:location ( b / beranda )
-	:time ( m / malam ) )
+	:time ( e / entitas-tanggal
+		:dayperiod ( m / malam ) ) )
 
 # ::id 36
 # ::snt Adik berlari dengan sangat kencang
@@ -530,7 +532,8 @@
 	:ARG1 ( b / bola
 		:mod ( k / kaki ) )
 	:time ( s / sampai
-		:op1 ( s / sore ) ) )
+		:op1 ( e / entitas-tanggal
+			:dayperiod ( s2 / sore ) ) ) )
 
 # ::id 56
 # ::snt Sabrina mencari bukunya yang terselip
@@ -590,200 +593,227 @@
 	:ARG1 ( o / orang )
 )
 
-# ::id 2
+# ::id 62
 # ::snt Adik membaca buku pelajaran di kamarnya
-( b1 / baca 
-	:ARG0 ( a1 / adik )
-	:ARG1 ( b2 / buku 
-		:mod ( a2 / ajar ))
-	:location ( k / kamar )
-)
+( b / baca-01
+	:ARG0 ( a / adik )
+	:ARG1 ( b2 / buku
+		:ARG0-of ( a2 / ajar-01
+			:ARG1 a ) )
+	:location ( k / kamar
+		:poss a ) )
 
-# ::id 2
+# ::id 63
 # ::snt Nur menemukan barang itu di jalan
-( t / temu 
-	:ARG0 ( n / nur )
-	:ARG1 ( b / barang )
-	:location ( j / jalan )
-)
+( t / temu-02
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Nur" ) )
+	:ARG1 ( b / barang
+		:mod ( i / itu ) )
+	:location ( j / jalan ) )
 
-# ::id 2
+# ::id 64
 # ::snt Messi mencetak gol indah di pertandingan tadi malam
-( c / cetak 
-	:ARG0 ( m1 / messi )
+( c / cetak-01
+	:ARG0 ( o / orang
+		:wiki "Lionel_Messi"
+		:name ( n / nama
+			:op1 "Messi" ) )
 	:ARG1 ( g / gol )
-	:location ( t1 / tanding )
-	:time ( t2 / tadi 
-		:mod ( m2 / malam ))
-)
+	:manner ( i / indah-01 )
+	:location ( t / tanding-01
+		:ARG0 o
+		:time ( e / entitas-tanggal
+			:dayperiod ( m / malam
+				:mod ( k / kemarin ) ) ) ) )
 
-# ::id 2
+# ::id 65
 # ::snt Anggi membeli kue di toko
-( b / beli 
-	:ARG0 ( a / anggi )
-	:ARG1 ( k / kue)
-	:location ( t / toko )
-)
+( b / beli-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Anggi" ) )
+	:ARG1 ( k / kue )
+	:location ( t / toko ) )
 
-# ::id 2
+# ::id 66
 # ::snt Riko menonton TV di ruang tamu
-( t1 / tonton 
-	:ARG0 ( r1 / riko )
-	:ARG1 ( t2 / tv )
-	:location ( r2 / ruang 
-		:mod ( t / tamu ))
-)
+( t / tonton-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Riko" ) )
+	:ARG1 ( t / televisi )
+	:location ( r / ruang
+		:mod ( t / tamu ) ) )
 
-# ::id 2
+# ::id 67
 # ::snt Bu Via menyanyikan lagu dengan semangat
-( n / nyanyi 
-	:ARG0 ( b / bu 
-		:name ( v / via ))
+( n / nyanyi-01
+	:ARG0 ( o / orang
+		:name ( n2 / nama
+			:op1 "Bu"
+			:op2 "Via" ) )
 	:ARG1 ( l / lagu )
-	:mod ( s / semangat )
-)
+	:manner ( s / semangat ) )
 
-# ::id 2
+# ::id 68
 # ::snt Wawan menyalakan lampu di depan rumah
-( n / nyala 
-	:ARG0 ( w / wawan)
+( n / nyala-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Wawan" ) )
 	:ARG1 ( l / lampu )
-	:location ( d / depan 
-		:mod ( r / rumah ))
-)
+	:location ( d / depan
+		:part ( r / rumah ) ) )
 
-# ::id 2
+# ::id 69
 # ::snt Yasmin membuang sampah di tempat sampah
-( b / buang 
-	:ARG0 ( y / yasmin )
-	:ARG1 ( s1 / sampah )
-	:location ( t / tempat 
-		:mod ( s2 / sampah ))
-)
+( b / buang-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Yasmin" ) )
+	:destination ( t / tempat
+		:mod ( s / sampah ) ) )
 
-# ::id 2
+# ::id 70
 # ::snt Rina bertemu temannya tadi malam
-( t1 / temu
-	:ARG0 ( r / rina )
-	:ARG1 ( t2 / teman )
-	:time ( t3 / tadi 
-		:mod ( m / malam ))
-)
+( t / temu-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Rina" ) )
+	:ARG1 ( t2 / teman
+		:poss o )
+	:time ( e / entitas-tanggal
+		:dayperiod ( m / malam
+			:mod ( k / kemarin ) ) ) )
 
-# ::id 2
+# ::id 71
 # ::snt Indah memakan bekalnya dengan lahap
-( m / makan 
-	:ARG0 ( i / indah )
-	:ARG1 ( b / bekal )
-	:mod ( l / lahap )
-)
+( m / makan-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Indah" ) )
+	:ARG1 ( b / bekal
+		:poss o )
+	:manner ( l / lahap ) )
 
-# ::id 2
+# ::id 72
 # ::snt Paul mematikan komputernya lima menit yang lalu
-( m1 / mati 
-	:ARG0 ( p / paul)
-	:ARG1 ( k / komputer )
-	:time ( l1 / lima 
-		:mod ( m / menit 
-			:mod ( l / lalu )))
-)
+( m / mati-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Paul" ) )
+	:ARG1 ( k / komputer
+		:poss o )
+	:time ( b / belum
+		:op1 ( s / sekarang )
+		:duration ( k2 / kuantitas-temporal
+			:unit ( m2 / menit )
+			:quant 5 ) ) )
 
-# ::id 2
+# ::id 73
 # ::snt Pak Sutejo menanam padi di sawah
-( t / tanam 
-	:ARG0 ( p1 / pak 
-		:name ( s1 / sutejo ) )
-	:ARG1 ( p2 / padi )
-	:location ( s2 / sawah )
-)
+( t / tanam-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Sutejo" ) )
+	:ARG1 ( p / padi )
+	:location ( s / sawah ) )
 
-# ::id 2
+# ::id 74
 # ::snt Karni membacakan orasi di atas panggung
-( b / baca 
-	:ARG0 ( k / karni )
-	:ARG1 ( o / orasi )
-	:location ( a / atas 
-		:mod ( p / panggung ))
-)
+( b / baca-02
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Karni" ) )
+	:ARG1 ( o2 / orasi )
+	:location ( a / atas
+		:part ( p / panggung ) ) )
 
-# ::id 2
+# ::id 75
 # ::snt Tata membeli baju mahal itu di mall
-( b1 / beli 
-	:ARG0 ( t / tata)
-	:ARG1 ( b2 / baju 
-		:mod ( m1 / mahal ))
-	:location ( m2 / mall )
-)
+( b / beli-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Tata" ) )
+	:ARG1 ( b2 / baju )
+	:location ( m / mal ) )
 
-# ::id 2
+# ::id 76
 # ::snt Pemburu itu berburu hewan di hutan
-( b1 / buru 
-	:ARG0 ( b2 / buru )
-	:ARG1 ( h1 / hewan )
-	:location ( h2 / hutan )
-)
+( b / buru-01
+	:ARG0 ( o / orang
+		:mod ( i / itu ) )
+	:ARG1 ( h / hewan )
+	:location ( h2 / hutan ) )
 
-# ::id 2
+# ::id 77
 # ::snt Riana makan nasi goreng
-(m / makan 
-	:ARG0 ( r / riana )
-	:ARG1 ( n / nasi 
-		:mod ( g / goreng ))
-)
+( m / makan-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Riana" ) )
+	:ARG1 ( n2 / nasi
+		:mod ( g / goreng ) ) )
 
-# ::id 2
+# ::id 78
 # ::snt Citra sedang membaca buku
-( b2 / baca 
-	:ARG0 ( c / citra)
-	:ARG1 ( b1 / buku )
-)
+( b / baca-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Citra" ) )
+	:ARG1 ( b / buku ) )
 
-# ::id 2
+# ::id 79
 # ::snt Ibu sedang mencuci pakaian
-(c / cuci 
+( c / cuci-01
 	:ARG0 ( i / ibu )
-	:ARG1 ( p / pakai )
-)
+	:ARG1 ( p / produk
+		:ARG1-of ( p / pakai-01 ) ) )
 
-# ::id 2
+# ::id 80
 # ::snt Joko membeli bahan makanan
-(b1 / beli 
-	:ARG0 ( j / joko )
-	:ARG1 ( b2 / bahan 
-		:mod ( m / makan ))
-)
+( b / beli-01
+	:ARG0 ( o / orang
+		:name ( n / nama )
+			:op1 "Joko" )
+	:ARG1 ( b2 / bahan
+		:mod ( p / produk
+			:ARG1-of ( m / makan-01 ) ) ) )
 
-# ::id 2
+# ::id 81
 # ::snt Dik Dina melihat pemandangan pantai
-( l / lihat 
-	:ARG0 ( d1 / dik 
-		:name ( d2 / dina ))
-	:ARG1 ( p1 / pandang 
-		:mod ( p2 / pantai ))
-)
+( l / lihat-01
+	:ARG0 ( o / orang
+		:name ( n / nama
+			:op1 "Dik"
+			:op2 "Dina" ) )
+	:ARG1 ( p / pantai
+		:ARG1-of ( i / indah-01 ) ) )
 
-# ::id 2
+# ::id 82
 # ::snt Para nelayan sedang memancing ikan
-( p1 / pancing
-	:ARG0 ( n / nelayan 
-		:mod ( p2 / para ))
-	:ARG1 ( i / ikan )
-)
+( p / pancing-01
+	:ARG0 ( n / nelayan )
+	:ARG1 ( i / ikan ) )
 
-# ::id 2
+
+# ::id 83
 # ::snt Kucing itu berburu mangsa
-( b / buru 
+( b / buru-01
 	:ARG0 ( k / kucing )
-	:ARG1 ( m / mangsa )
-)
+	:ARG1 ( m / mangsa ) )
 
-# ::id 2
+# ::id 84
 # ::snt Anak laki-laki itu yang menendang bola
-(t / tendang
-	:ARG0 ( a / anak 
-		:mod ( l / laki ))
-	:ARG1 ( b / bola )
-)
+( a / anak
+	:mod ( l / laki-laki )
+	:mod ( i / itu )
+	:ARG0-of ( t / tendang-01
+		:ARG1 ( b / bola ) ) )
 
 # ::id 2
 # ::snt Mey meminum minuman itu
