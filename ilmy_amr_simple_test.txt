@@ -812,7 +812,8 @@
 # ::id 82
 # ::snt Para nelayan sedang memancing ikan
 ( p / pancing-01
-	:ARG0 ( n / nelayan )
+	:ARG0 ( k / kelompok
+		:consist-of ( n / nelayan ) )
 	:ARG1 ( i / ikan ) )
 
 # ::id 83
@@ -842,133 +843,154 @@
 # ::id 86
 # ::snt Suster Ayu suka menonton drama Korea
 ( s / suka-01
-	:ARG0 ( s / suster
+	:ARG0 ( s2 / suster
 		:wiki -
 		:name ( n / nama
 			:op1 "Ayu" ) )
 	:ARG1 ( t / tonton-01
-		:ARG1 ( p / program-siaran
-			:wiki "Drama_Korea"
-			:name ( n / nama
-				:op1 "drama"
-				:op2 "Korea" ) ) ) )
+		:ARG0 s2
+		:ARG1 ( d / drama
+			:source ( n2 / negara
+				:wiki "Korea"
+				:name ( n / nama
+					:op1 "Korea" ) ) ) ) )
 
-# ::id 2
+# ::id 87
 # ::snt Bapak Rian sedang mencari nafkah
-( c / cari 
-	:ARG0 ( b / bapak 
-		:name ( r / rian ))
-	:ARG1 ( n / nafkah )
-)
+( c / cari-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Bapak"
+			:op2 "Rian" ) )
+	:ARG1 ( n2 / nafkah ) )
 
-# ::id 2
+# ::id 88
 # ::snt Ibu Budi sedang menanak nasi
-( n1 / nanak
-	:ARG0 ( i / ibu 
-		:name ( b / budi ))
-	:ARG1 ( n2 / nasi )
-)
+( n / nanak-01
+	:ARG0 ( i / ibu
+		:poss ( o / orang
+			:wiki -
+			:name ( n / nama
+				:op1 "Budi" ) ) )
+	:ARG1 ( n / nasi ) )
 
-# ::id 2
+# ::id 89
 # ::snt Polisi itu menangkap gerombolan pencuri
-(t / tangkap 
-	:ARG0 ( p / polisi)
-	:ARG1 ( c / curi
-		:mod ( g / gerombol ) 
-	)
-)
+( t / tangkap-01
+	:ARG0 ( p / polisi
+		:mod ( i / itu ) )
+	:ARG1 ( k / kelompok
+		:ARG0-of ( c / curi-01 ) ) )
 
-# ::id 2
+# ::id 90
 # ::snt Auliya menjual beberapa perhiasannya
-( j / jual 
-	:ARG0 ( a / auliya )
-	:ARG1 ( h / hias 
-		:mod ( b / berapa ))
-)
+( j / jual-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Auliya" ) )
+	:ARG1 ( p / produk
+		:instrument-of ( h / hias-01 )
+		:poss o ) )
 
-# ::id 2
+# ::id 91
 # ::snt Nadya suka menggambar komik
-( s / suka 
-	:ARG0 ( n / nadya )
-	:ARG1 ( g / gambar 
-		:ARG1 ( k / komik ))
-)
+( s / suka-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Nadya" ) )
+	:ARG1 ( g / gambar-01
+		:ARG0 o
+		:ARG1 ( k / komik ) ) )
 
-# ::id 2
+# ::id 92
 # ::snt Ajeng tertawa terbahak-bahak
-( t / tawa 
-	:ARG0 ( a / ajeng )
-	:mod ( b / bahak )
-)
+( t / tawa-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Ajeng" ) )
+	:manner ( k / keras ) )
 
-# ::id 2
+# ::id 93
 # ::snt Ibu memasak di dapur
-( m / masak 
+( m / masak-01
 	:ARG0 ( i / ibu )
-	:location ( d / dapur )
-)
+	:location ( d / dapur ) )
 
-# ::id 2
+# ::id 94
 # ::snt Devin menangis tersedu-sedu
-( t / tangis 
-	:ARG0 ( d / devin )
-	:mod ( s /sedu )
-)
+( t / tangis-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Devin" ) )
+	:manner ( s / sedu-01
+		:ARG0 o ) )
 
-# ::id 2
+# ::id 95
 # ::snt Arlita sedang belajar di sekolah
-( a1 / ajar 
-	:ARG0 ( a2 / arlita )
-	:location ( s / sekolah )
-)
+( a / ajar-01
+	:ARG1 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Arlita" ) )
+	:location ( s / sekolah ) )
 
-# ::id 2
+# ::id 96
 # ::snt Bugie bermain di halaman rumah
-( m / main 
-	:ARG0 ( b / bugie )
-	:location ( h / halaman 
-		:mod ( r / rumah ))
-)
+( m / main-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Bugie" ) )
+	:location ( h / halaman
+		:part ( r / rumah ) ) )
 
-# ::id 2
+# ::id 97
 # ::snt Para siswa berdiskusi di warung kopi
-( d / diskusi 
-	:ARG0 ( s / siswa 
-		:mod ( p / para ))
-	:location ( w / waring 
-		:mod ( k / kopi ))
-)
+( d / diskusi-01
+	:ARG0 ( k / kelompok
+		:consist-of ( s / siswa )
+	:location ( w / warung
+		:mod ( k2 / kopi ) ) ) )
 
-# ::id 2
+# ::id 98
 # ::snt Rizal sedang membaca di perpustakaan
-( b / baca 
-	:ARG0 ( r / rizal )
-	:location ( p / pustaka )
-)
+( b / baca-01 
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Rizal" ) )
+	:location ( p / perpustakaan ) )
 
-# ::id 2
+# ::id 99
 # ::snt Singa meraung dengan keras
-( r / raung 
+( r / raung-01
 	:ARG0 ( s / singa )
-	:mod ( k / keras )
-)
+	:manner ( k / keras ) )
 
-# ::id 2
+# ::id 100
 # ::snt Pak guru berpidato di lapangan sekolah
-( p1 / pidato 
-	:ARG0 ( p2 / pak 
-		:mod ( g / guru ))
-	:location ( l / lapangan 
-		:mod ( s / sekolah ))
-)
+( b / baca-02
+	:ARG0 ( g / guru
+		:mod ( l / laki-laki ) )
+	:ARG1 ( p / pidato )
+	:location ( l2 / lokasi
+		:ARG1-of ( l3 / lapang-01 )
+		:part ( s / sekolah ) ) )
 
-# ::id 2
+# ::id 101
 # ::snt Bu Rima berdandan di salon
-( d / dandan 
-	:ARG0 ( b / bu 
-		:name ( r / rima ))
-	:location ( s / salon )
-)
+( d / dandan-01
+	:ARG1 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Bu"
+			:op2 "Rima" ) )
+	:location ( s / salon ) )
 
 # ::id 245
 # ::snt Kak Dina beli baju di toko baru.
