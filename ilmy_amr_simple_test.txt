@@ -71,14 +71,16 @@
 
 # ::id 10
 # ::snt Andi pergi berkemah di tepi Pantai
-( p / pergi-02
+( p / pergi-01
 	:ARG0 ( o / orang
 		:wiki -
 		:name ( n / nama
 			:op1 "Andi" ) )
-	:ARG1 ( k / kemah-01
+	:purpose ( k / kemah-01
+		:ARG0 o
 		:location ( t / tepi
-			:part ( p2 / pantai ) ) ) )
+			:part ( p2 / pantai ) ) )
+	:destination t )
 
 # ::id 11
 # ::snt Angga pergi ke toko buku
@@ -87,7 +89,7 @@
 		:wiki -
 		:name ( n / nama
 			:op1 "Angga" ) )
-	:ARG1 ( t / toko 
+	:destination ( t / toko 
 		:mod ( b / buku ) ) )
 
 # ::id 12
@@ -169,13 +171,13 @@
 
 # ::id 21
 # ::snt Pak Roni berangkat ke Bandung besok
-( p / pergi-03
+( p / pergi-02
 	:ARG0 ( o / orang
 		:wiki -
 		:name ( n / nama
 			:op1 "Pak"
 			:op2 "Roni" ) )
-	:ARG1 ( k / kota
+	:destination ( k / kota
 		:wiki "Kota_Bandung"
 		:name ( n2 / nama
 			:op1 "Bandung" ) )
@@ -183,13 +185,13 @@
 
 # ::id 22
 # ::snt Bu Cinta berangkat ke sekolah menggunakan taksi
-( p / pergi-03
+( p / pergi-02
 	:ARG0 ( o / orang
 		:wiki -
 		:name ( n / nama
 			:op1 "Bu"
 			:op2 "Cinta" ) )
-	:ARG1 ( s / sekolah )
+	:destination ( s / sekolah )
 	:manner ( t / taksi ) )
 
 # ::id 23
@@ -262,7 +264,7 @@
 		:mod ( p / produk
 			:wiki "Facebook"
 			:name ( n2 / nama
-				:op1 "fb" ) ) ) )
+				:op1 "FB" ) ) ) )
 
 # ::id 29
 # ::snt Ranti berjalan dengan pelan
@@ -347,7 +349,7 @@
 		:wiki -
 		:name ( n / nama
 			:op1 "Wahyu" ) )
-	:ARG1 ( w / warung ) )
+	:destination ( w / warung ) )
 
 # ::id 38
 # ::snt Anita sedang membuat roti
@@ -548,14 +550,14 @@
 
 # ::id 57
 # ::snt Kami pergi berkemah di Gunung Semeru
-( p / pergi-02
+( p / pergi-01
 	:ARG0 ( k / kami )
-	:ARG1 ( k2 / kemah-01
+	:purpose ( k2 / kemah-01
 		:location ( g / gunung
 			:wiki "Gunung_Semeru"
 			:name ( n / nama
-				:op1 "Gunung"
-				:op2 "Semeru" ) ) ) )
+				:op1 "Semeru" ) ) )
+	:destination g )
 
 # ::id 58
 # ::snt Bu Septia menunggang kerbau
@@ -992,90 +994,96 @@
 			:op2 "Rima" ) )
 	:location ( s / salon ) )
 
-# ::id 245
+# ::id 102
 # ::snt Kak Dina beli baju di toko baru.
+( b / beli-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Kak"
+			:op2 "Dina" ) )
+	:ARG1 ( b2 / baju )
+	:location ( t / toko
+		:mod ( b3 / baru ) ) )
 
-(b3/beli
-	:ARG0 (k/kak
-		:name ( d / dina ))
-	:ARG1 (b1/baju)
-	:location (t/toko
-		:mod (b2/baru)))
-
-# ::id 245
+# ::id 103
 # ::snt Paman Budi tidur di kamar depan
+( t / tidur-01
+	:ARG1 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Paman"
+			:op2 "Budi" ) )
+	:location ( k / kamar
+		:location ( d / depan ) ) )
 
-(t/tidur
-	:ARG0 (p/paman
-		:name ( b / budi ))
-	:location (k/kamar
-		:mod (d/depan)))
-
-# ::id 245
+# ::id 104
 # ::snt Ibu menyiram bunga
-( s / siram 
+( s / siram-01
 	:ARG0 ( i / ibu )
-	:ARG1 ( b / bunga )
-)
+	:ARG1 ( b / bunga ) )
 
-# ::id 245
+# ::id 105
 # ::snt Bunga disiram ibu
-( s / siram 
+( s / siram-01
 	:ARG0 ( i / ibu )
-	:ARG1 ( b / bunga )
-)
+	:ARG1 ( b / bunga ) )
 
-# ::id 245
+# ::id 106
 # ::snt Ibu Shinta menyiram bunga mawar dengan air hujan yang ditampung kemarin
-( s1 / siram 
-	:ARG0 ( i / ibu 
-		:name ( s2 / shinta ))
-	:ARG1 ( b / bunga 
-		:mod ( m / mawar ))
-	:mod ( a / air 
-		:mod ( h / hujan 
-			:mod ( t /tampung 
-				:time ( k / kemarin ))))
-)
+( s / siram-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Ibu"
+			:op2 "Shinta" ) )
+	:ARG1 ( m / mawar )
+	:instrument ( a / air
+		:source ( h / hujan )
+		:ARG1-of ( t / tampung-01
+			:ARG0 o
+			:time ( k / kemarin ) ) ) )
 
-# ::id 245
+# ::id 107
 # ::snt Ayah membaca koran Waspada di teras rumah
-(b / baca 
+( b / baca-01
 	:ARG0 ( a / ayah )
-	:ARG1 ( k / koran 
-		:name ( w / waspada ))
-	:location ( t / teras 
-		:mod ( r / rumah ))
-)
+	:ARG1 ( k / koran
+		:wiki "Waspada_(surat_kabar)"
+		:name ( n / nama
+			:op1 "Waspada") )
+	:location ( t / teras
+		:part ( r / rumah ) ) )
 
-# ::id 245
+# ::id 108
 # ::snt Ketika hujan tadi malam, penjual nasi goreng berjualan
-(j1 / jual 
-	:ARG0 ( j2 / jual 
-		:ARG1 ( n / nasi 
-			:mod ( g / goreng )))
-	:time ( h / hujan 
-		:time ( t / tadi 
-			:mod ( m / malam )))
-)
+( j / jual-01
+	:ARG0 ( o / orang )
+	:ARG1 ( n / nasi
+		:mod ( g / goreng ) )
+	:time ( h / hujan
+		:time ( e / entitas-tanggal
+			:dayperiod ( m / malam
+				:mod ( k / kemarin ) ) ) ) )
 
-# ::id 245
+# ::id 109
 # ::snt Adik membaca buku ensiklopedia
-( b1 / baca
+( b / baca-01
 	:ARG0 ( a / adik )
-	:ARG1 ( b2 / buku 
-		:mod ( e / ensiklopedia ))
-)
+	:ARG1 ( b2 / buku
+		:mod ( e / ensiklopedia ) ) )
 
-# ::id 245
+# ::id 110
 # ::snt Kami pergi ke Gunung Rinjani saat liburan nanti
-( p /pergi
+( p / pergi-01
 	:ARG0 ( k / kami )
-	:location ( g / gunung 
-		:name ( r / rinjani ))
-	:time ( l / liburan 
-		:mod ( n / nanti ))
-)
+	:direction ( g / gunung
+		:wiki "Gunung_Rinjani"
+		:name ( n / nama
+			:op1 "Rinjani" ) )
+	:time ( l / libur-01
+		:ARG1 k
+		:time ( n / nanti ) ) )
 
 # ::id 245
 # ::snt Aku suka dengan tulisannya
