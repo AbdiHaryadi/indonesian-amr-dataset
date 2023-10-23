@@ -1085,125 +1085,151 @@
 		:ARG1 k
 		:time ( n / nanti ) ) )
 
-# ::id 245
+# ::id 111
 # ::snt Aku suka dengan tulisannya
-( s / suka 
+( s / suka-01 
 	:ARG0 ( a / aku )
-	:ARG1 ( t / tulis)
-)
+	:ARG1 ( s2 / sesuatu
+		:ARG1-of ( t / tulis-01
+			:ARG0 ( d / dia ) ) ) )
 
-# ::id 245
+# ::id 112
 # ::snt Ibu menjahit baju sekolahku yang robek
-( j / jahit 
-	:ARG0 ( i / ibu )
-	:ARG1 ( b / baju 
-		:mod ( s / sekolah 
-			:mod ( r / robek )))
-)
+( j / jahit-01
+	:ARG0 ( i / ibu
+		:poss ( a / aku ) )
+	:ARG1 ( b / baju
+		:mod ( s / sekolah )
+		:poss a
+		:ARG1-of ( r / robek-01 ) ) )
 
-# ::id 245
+# ::id 113
 # ::snt Tim Indonesia mencetak gol ke gawang lawan
-( c / cetak
-	:ARG0 ( t / tim 
-		:name ( i / indonesia ))
-	:ARG1 ( g1 / gol )
-	:location ( g2/ gawang 
-		:mod ( l / lawan )))
+( c / cetak-01
+	:ARG0 ( t / tim
+		:source ( n / negara
+			:wiki "Indonesia"
+			:name ( n2 / nama
+				:op1 "Indonesia" ) ) )
+	:ARG1 ( g / gol )
+	:destination ( g2 / gawang
+		:poss ( l / lawan
+			:poss t ) ) )
 
-# ::id 245
+# ::id 114
 # ::snt Bu Asti mengenakan topi bundar 
-( k / kena 
-	:ARG0 ( b1 / bu 
-		:name ( a / asti ))
-	:ARG1 ( t / topi 
-		:mod ( b2 / bundar ))
-)
+( p / pakai-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Bu"
+			:op2 "Asti" ) )
+	:ARG1 ( t / topi
+		:mod ( b / bundar ) ) )
 
-# ::id 245
+# ::id 115
 # ::snt Tahanan di Nusakambangan diberikan keringanan saat hari raya Idul Fitri
-( b / beri 
-	:ARG0 ( t / tahanan 
-		:location ( n / nusakambangan ))
-	:ARG1 ( r1 / ringan )
-	:time ( h / hari 
-		:mod ( r2 / raya 
-			:name ( i / idul 
-				:mod ( f / fitri )))))
+( r / ringan-01
+	:ARG1 ( o / orang
+		:ARG1-of ( t / tahan-01
+			:location ( p / pulau
+				:wiki "Nusakambangan"
+				:name ( n / nama
+					:op1 "Nusakambangan" ) ) ) )
+	:time ( h / hari
+		:wiki "Idulfitri"
+		:name ( n / nama
+			:op1 "Idul"
+			:op2 "Fitri" ) ) )
 
-# ::id 245
-# ::snt Cerpen yang ada di sekolah menginpirasi pembacanya
-( i / inspirasi 
-	:ARG0 ( c / cerpen 
-		:mod ( a / ada 
-			:location ( s / sekolah )))
-	:ARG1 ( b / baca )
-)
+# ::id 116
+# ::snt Cerpen yang ada di sekolah menginspirasi pembacanya
+( i / inspirasi-01
+	:ARG0 ( c / cerita
+		:mod ( p / pendek )
+		:location ( s / sekolah ) )
+	:ARG1 ( o / orang
+		:ARG0-of ( b / baca
+			:ARG1 c ) ) )
 
-# ::id 245
+# ::id 117
 # ::snt Perpustakaan menjadi tempat yang paling nyaman di sekolah kami
-( j / jadi 
-	:ARG0 ( p1 / pustaka )
-	:ARG1 ( t / tempat 
-		:mod ( n / nyaman 
-			:mod ( p2 / paling )))
-	:location ( s / sekolah 
-		:mod ( k / kami ))
-)
+( m / memiliki-derajat-91
+	:ARG1 ( p / perpustakaan
+		:location ( s / sekolah
+			:poss ( k / kami ) ) )
+	:ARG2 ( n / nyaman )
+	:ARG3 ( p2 / paling )
+	:ARG5 ( t / tempat
+		:location s ) )
 
-# ::id 245
+
+# ::id 118
 # ::snt Ibu Sri Yuni membeli kue capit
-( b / beli 
-	:ARG0 ( i / ibu 
-		:name ( s / sri 
-			:name ( y / yuni )))
-	:ARG1 ( k / kue 
-		:name ( c / capit ))
-)
+( b / beli-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Ibu"
+			:op2 "Sri"
+			:op3 "Yuni" ) )
+	:ARG1 ( k / kue
+		:wiki -
+		:name ( n / nama
+			:op1 "Capit" ) ) )
 
-# ::id 245
+# ::id 119
 # ::snt Pak Ucok membajak sawah dengan teknologi pertanian yang modern
-( b / bajak 
-	:ARG0 ( p / pak 
-		:name ( u / ucok ))
+( b / bajak-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Ucok" ) )
 	:ARG1 ( s / sawah )
-	:mod ( t1 / teknologi 
-		:mod ( t2 / tani 
-			:mod ( m / modern )))
-)
+	:instrument ( t / teknologi
+		:mod ( t2 / tani )
+		:mod ( m / modern ) ) )
 
-# ::id 245
+# ::id 120
 # ::snt Ibu sedang mencuci piring
-( c / cuci 
+( c / cuci-01
 	:ARG0 ( i / ibu )
-	:ARG1 ( p / piring )
-)
+	:ARG1 ( p / piring ) )
 
-# ::id 245
+# ::id 121
 # ::snt Pak Andri bermain bola sampai sore
-( m / main 
-	:ARG0 ( p / pak 
-		:name ( a / andri ))
+( m / main-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Andri" ) )
 	:ARG1 ( b / bola )
-	:time ( s1 / sampai 
-		:mod ( s2 / sore ))
-)
+	:time ( s / sampai
+		:op1 ( e / entitas-tanggal
+			:dayperiod ( s2 / sore ) ) ) )
 
-# ::id 245
+# ::id 122
 # ::snt Rani sedang mencari buku yang terselip
-( c / cari 
-	:ARG0 ( r / rani )
-	:ARG1 ( b / buku 
-		:mod ( s / selip ))
-)
+( c / cari-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Rani" ) )
+	:ARG1 ( b / buku
+		:ARG1-of ( s / selip-01 ) ) )
 
-# ::id 245
+# ::id 123
 # ::snt Kami pergi berkemah di Gunung Semeru
-( p / pergi 
-	:ARG0 ( k1 / kami )
-	:ARG1 ( k2 / kemah )
-	:location ( g / gunung 
-		:name (s / semeru ))
-)
+( p / pergi-01
+	:ARG0 ( k / kami )
+	:purpose ( k2 / kemah-01
+		:location ( g / gunung
+			:wiki "Gunung_Semeru"
+			:name ( n / nama
+				:op1 "Semeru" ) ) )
+	:destination g )
 
 # ::id 245
 # ::snt Ada tikus di bawah ranjang tidurku
