@@ -500,8 +500,7 @@
 	:ARG1 ( s / sampah
 		:ARG1-of ( d / daur-ulang-01
 			:ARG0 o
-			:ARG1-of ( b / bisa-01
-				:ARG0 o ) ) ) )
+			:ARG1-of ( b / bisa-01 ) ) ) )
 
 # ::id 53
 # ::snt Weni membantu ayahnya memanen buah apel di kebun miliknya
