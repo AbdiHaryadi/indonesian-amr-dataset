@@ -1077,7 +1077,7 @@
 # ::snt Kami pergi ke Gunung Rinjani saat liburan nanti
 ( p / pergi-01
 	:ARG0 ( k / kami )
-	:direction ( g / gunung
+	:destination ( g / gunung
 		:wiki "Gunung_Rinjani"
 		:name ( n / nama
 			:op1 "Rinjani" ) )
@@ -1231,107 +1231,129 @@
 				:op1 "Semeru" ) ) )
 	:destination g )
 
-# ::id 245
+# ::id 124
 # ::snt Ada tikus di bawah ranjang tidurku
-( a / ada 
-	:ARG1 ( t1 / tikus )
-	:location ( b / bawah 
-		:mod ( r /ranjang 
-			:mod ( t2 / tidur)))
-)
+( t / terletak-di-91
+	:ARG1 ( t2 / tikus )
+	:ARG2 ( b / bawah
+		:part ( r / ranjang
+			:poss ( a / aku ) ) ) )
 
-# ::id 245
+# ::id 125
 # ::snt Linda pergi ke toko cat
-( p / pergi 
-	:ARG0 ( l / linda )
-	:location ( t / toko 
-		:mod ( c / cat))
-)
+( p / pergi-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Linda" ) )
+	:destination ( t / toko	
+		:mod ( c / cat ) ) )
 
-# ::id 245
+# ::id 126
 # ::snt Aku masih ada di rumah
-( a1 / ada 
-	:ARG1 ( a2/ aku  )
-	:location ( r / rumah )
-)
+( t / terletak-di-91
+	:ARG1 ( a / aku )
+	:ARG2 ( r / rumah )
+	:mod ( m / masih ) )
 
-# ::id 245
+# ::id 127
 # ::snt Kami pergi ke sana sekarang
-( p / pergi 
+( p / pergi-01
 	:ARG0 ( k / kami )
-	:location ( s1 / sana )
-	:time ( s2 / sekarang )
-)
+	:destination ( s / sana )
+	:time ( s / sekarang ) )
 
-# ::id 245
+# ::id 128
 # ::snt Ayah sedang ada di kantor
-( a1 / ada 
-	:ARG0 ( a2 / ayah )
-	:location ( k / kantor )
-)
+( t / terletak-di-91
+	:ARG1 ( a / ayah )
+	:ARG2 ( k / kantor ) )
 
-# ::id 245
+# ::id 129
 # ::snt Ibu Rusni memasak sejak tadi pagi
-( m / masak 
-	:ARG0 ( i / ibu 
-		:name ( r / rusni ))
-	:time ( s / sejak 
-		:mod ( t/ tadi 
-			:mod ( p / pagi )))
-)
+( m / masak-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Ibu"
+			:op2 "Rusni" ) )
+	:time ( s / sejak
+		:op1 ( e / entitas-tanggal
+			:dayperiod ( p / pagi
+				:mod ( i / ini ) ) ) ) )
 
-# ::id 245
+
+# ::id 130
 # ::snt Andini berlibur ke pantai hari ini
-( l / libur
-	:ARG0 ( a / andini )
-	:location ( p / pantai )
-	:time ( h / hari 
-		:mod ( i / ini ))
-)
+( l / libur-02
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Andini" ) )
+	:destination ( p / pantai )
+	:time ( h / hari
+		:mod ( i / ini ) ) )
 
-# ::id 245
+# ::id 131
 # ::snt Setelah kejadian kemarin, kami trauma pergi ke sana
-( t / trauma 
-	:ARG0 ( k1 / kami)
-	:ARG1 ( p / pergi 
-		:location ( s1 / sana ))
-	:time ( s2 / setelah 
-		:mod ( j / jadi 
-			:mod ( k2 / kemarin )))
-)
+( t / trauma-01
+	:ARG0 ( p / peristiwa
+		:time ( k / kemarin ) )
+	:ARG1 ( k / kami )
+	:topic ( p2 / pergi-01
+		:ARG0 k
+		:destination ( s / sana ) )
+	:time ( t / telah
+		:op1 p ) )
 
-# ::id 245
+# ::id 132
 # ::snt Mita membersihkan rumah.
-( b / bersih 
-	:ARG0 ( m / mita )
-	:ARG1 ( r / rumah )
-)
+( b / bersih-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Mita" ) )
+	:ARG1 ( r / rumah ) )
 
-# ::id 245
+# ::id 133
 # ::snt Pak Dodi mengatakan Bu Nia pergi ke rumah Jihan sebelum magrib
-( k / kata 
-	:ARG0 ( p1 / pak 
-		:name ( d / dodi ))
-	:ARG1 ( p2 / pergi
-		:ARG0 ( b1 / bu 
-			:name ( n / nia ))
-		:location ( r / rumah 
-			:name ( j / jihan ))
-		:time ( b2 / belum 
-			:mod ( m / maghrib )) 
-	)
-)
+( k / kata-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Dodi" ) )
+	:ARG1 ( p / pergi-01
+		:ARG0 ( o2 / orang
+			:wiki -
+			:name ( n2 / nama
+				:op1 "Bu"
+				:op2 "Nia" ) )
+		:destination ( r / rumah
+			:poss ( o3 / orang
+				:wiki -
+				:name ( n3 / nama
+					:op1 "Jihan" ) ) )
+		:time ( b / belum
+			:op1 ( e / entitas-tanggal
+				:dayperiod ( m / magrib ) ) ) ) )
 
-# ::id 245
+# ::id 134
 # ::snt Tika berhenti menangis setelah Ayah membelikannya mainan baru
-( h / henti 
-	:ARG0 ( t1 / tika )
-	:ARG1 ( t2 / tangis )
-	:time ( t3 / telah 
-		:mod ( b1 / beli 
+( h / henti-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Tika" ) )
+	:ARG1 ( t / tangis-01
+		:ARG0 o )
+	:time ( t2 / telah
+		:op1 ( b / beli-01
 			:ARG0 ( a / ayah )
-			:ARG1 ( m / main
-				:mod ( b2 / baru )))))
+			:ARG1 ( s / sesuatu
+				:ARG1-of ( m / main-01 )
+				:mod ( b2 / baru )
+				:beneficiary o ) ) ) )
 
 # ::id 245
 # ::snt Ibu Guru mengatakan bahwa kami harus menyelesaikan soal ujian hari ini
