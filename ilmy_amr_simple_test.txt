@@ -648,7 +648,7 @@
 		:wiki -
 		:name ( n / nama
 			:op1 "Riko" ) )
-	:ARG1 ( t / televisi )
+	:medium ( t / televisi )
 	:location ( r / ruang
 		:mod ( t / tamu ) ) )
 
@@ -1355,73 +1355,72 @@
 				:mod ( b2 / baru )
 				:beneficiary o ) ) ) )
 
-# ::id 245
+# ::id 135
 # ::snt Ibu Guru mengatakan bahwa kami harus menyelesaikan soal ujian hari ini
-( k1 / kata 
-	:ARG0 ( i1 / ibu 
-		:mod ( g / guru ))
-	:ARG1 ( s1 / selesai
-		:ARG0 ( k2 / kami )
-		:ARG1 ( s2  / soal 
-			:mod ( u / ujian ))
-		:time ( h / hari 
-			:mod ( i2 / ini )) 
-	)
-)
+( k / kata-01
+	:ARG0 ( g / guru
+		:mod ( p / perempuan ) )
+	:ARG1 ( h / harus-01
+		:ARG1 ( s / selesai-01
+			:ARG0 ( k / kami )
+			:ARG1 ( s2 / soal
+				:instrument-of ( u / uji-01 ) )
+			:time ( h2 / hari
+				:mod ( i / ini ) ) ) ) )
 
-# ::id 245
+# ::id 136
 # ::snt Saya tertawa ketika melihat acara komedi di televisi
-( t1 / tawa 
-	:ARG0 ( s / saya )
-	:time ( l / lihat 
-		:ARG1 ( a / acara 
-			:mod ( k / komedi ))
-		:location ( t2 / televisi ))
-)
+( t / tawa-01
+	:ARG0 ( a / aku )
+	:time ( t / tonton-01
+		:ARG0 a
+		:ARG1 ( a2 / acara
+			:mod ( k / komedi ) )
+		:medium ( t / televisi ) ) )
 
-# ::id 245
+# ::id 137
 # ::snt Pak Gilang mengatakan bahwa Ayah pulang lusa
-( k / kata 
-	:ARG0 ( p1 / pak 
-		:name ( g / gilang ))
-	:ARG1 ( p2 / pulang 
+( k / kata-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Gilang" ) )
+	:ARG1 ( p / pulang-01
 		:ARG0 ( a / ayah )
-		:time ( l / lusa ))
-)
+		:time ( l / lusa ) ) )
 
-# ::id 245
+# ::id 138
 # ::snt Bulan depan, kami mengikuti UNBK secara serentak
-( i / ikut 
+( s / serta-01
 	:ARG0 ( k / kami )
-	:ARG1 ( u / unbk)
-	:mod (  c / cara 
-		:mod ( r / rentak ))
-	:time ( b / bulan 
-		:mod ( d / depan ))
-)
+	:ARG1 ( p / peristiwa
+		:wiki -
+		:name ( n / nama
+			:op1 "UNBK" ) )
+	:time ( b / bulan
+		:mod ( b2 / berikut ) )
+	:manner ( s / serentak ) )
 
-# ::id 245
+# ::id 139
 # ::snt Kue ini layak dimakan
-( l / layak 
-	:ARG0 ( k / kue )
-	:ARG1 ( m / makan )
-)
+( l / layak-01
+	:ARG1 ( m / makan-01
+		:ARG1 ( k / kue
+			:mod ( i / ini ) ) ) )
 
-# ::id 245
+# ::id 140
 # ::snt Obat ini kadaluarsa
-(k / kadaluarsa 
-	:ARG0 ( o / obat )
-)
+( k / kedaluwarsa-01
+	:ARG1 ( o / obat
+		:mod ( i / ini ) ) )
 
-# ::id 245
+# ::id 141
 # ::snt Malam ini kami menginap di hotel yang besar
-( i1 / inap 
+( i / inap-01
 	:ARG0 ( k / kami )
-	:location ( h / hotel 
-		:mod ( b / besar ))
-	:time ( m / malam 
-		:mod ( i2 / ini ))
-)
+	:location ( h / hotel
+		:ARG1-of ( b / besar-01 ) ) )
 
 # ::id 245
 # ::snt Jojon pulang ke rumah sejak Ayah memarahinya
