@@ -1421,15 +1421,18 @@
 	:location ( h / hotel
 		:ARG1-of ( b / besar-01 ) ) )
 
-# ::id 245
+# ::id 142
 # ::snt Jojon pulang ke rumah sejak Ayah memarahinya
-( p / pulang 
-	:ARG0 ( j / jojon )
-	:location ( r / rumah )
-	:time ( s / sejak 
-		:mod ( m / marah 
-			:ARG0 ( a / ayah ))) 
-)
+( p / pulang-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Jojon" ) )
+	:destination ( r / rumah )
+	:time ( s / sejak
+		:op1 ( m / marah-01
+			:ARG0 ( a / ayah )
+			:ARG1 o ) ) )
 
 # ::id 245
 # ::snt Tuangkan adonan ke dalam loyang setelah adonan dingin
