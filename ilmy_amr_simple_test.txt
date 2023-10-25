@@ -1434,60 +1434,65 @@
 			:ARG0 ( a / ayah )
 			:ARG1 o ) ) )
 
-# ::id 245
+# ::id 143
 # ::snt Tuangkan adonan ke dalam loyang setelah adonan dingin
-( t1 / tuang 
-	:ARG1 ( a1 / adon )
-	:location ( d1 / dalam 
-		:mod ( l / loyang ))
-	:time ( t2 / telah 
-		:mod ( a2 / adon 
-			:mod ( d2 / dingin ))))
+( t / tuang-01
+	:mode imperatif
+	:ARG0 ( k / kamu )
+	:ARG1 ( s / sesuatu
+		:ARG1-of ( h / hasil-01
+			:ARG0 ( a / adon-01 ) ) )
+	:destination ( l / loyang )
+	:time ( t2 / telah
+		:op1 ( d / dingin-01
+			:ARG1 s ) ) )
 
-# ::id 245
+# ::id 144
 # ::snt Ibu memberikan sup hangat ketika Ayah pulang
-( b / beri 
+( b / beri-01
 	:ARG0 ( i / ibu )
-	:ARG1 ( s / sup 
-		:mod ( h / hangat ))
-	:time ( k / ketika 
-		:mod ( p / pulang 
-			:ARG0 ( a / ayah )))
-)
+	:ARG1 ( s / sup
+		:ARG1-of ( h / hangat-01 ) )
+	:time ( p / pulang-01
+		:ARG0 ( a / ayah ) ) )
 
-# ::id 245
+# ::id 145
 # ::snt Pak Tono tahu bahwa komputernya rusak
-( t1 / tahu 
-	:ARG0 ( p / pak 
-		:name ( t2 / tono ))
-	:ARG1 ( k / komputer 
-		:mod ( r / rusak ))
-)
+( t / tahu-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Tono" ) )
+	:ARG1 ( r / rusak-01
+		:ARG1 ( k / komputer
+			:poss o ) ) )
 
-# ::id 245
+# ::id 146
 # ::snt saya pergi ke pasar jam enam pagi
-( p1 / pergi 
-	:ARG0 ( s / saya )
-	:location ( p2 / pasar )
-	:time ( j / jam 
-		:mod ( e / enam 
-			:mod ( p3 / pagi ))))
+( p / pergi-01
+	:ARG0 ( a / aku )
+	:destination ( p2 / pasar )
+	:time ( e / entitas-tanggal
+		:time 6:00 ) )
 
-# ::id 245
+# ::id 147
 # ::snt Ayah pergi ke kantor minggu kemarin
-( p / pergi 
+( p / pergi-01
 	:ARG0 ( a / ayah )
-	:location ( k1 / kantor )
-	:time ( m / minggu 
-		:mod ( k2 / kemarin ))
-)
+	:destination ( k / kantor )
+	:time ( e / entitas-tanggal
+		:weekday ( m / minggu
+			:mod ( k2 / kemarin ) ) ) )
 
-# ::id 245
+# ::id 148
 # ::snt Andi berangkat ke sekolah
-(b / berangkat 
-	:ARG0 ( a / andi )
-	:location ( s / sekolah )
-)
+( p / pergi-03
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Andi" ) )
+	:destination ( s / sekolah ) )
 
 # ::id 245
 # ::snt ani mendapat nilai bagus pada hari pertama
