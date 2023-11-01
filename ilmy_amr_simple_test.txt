@@ -147,7 +147,9 @@
 		:ARG1-of ( s / sisa-01 ) )
 	:ARG2 ( k / kuantitas-moneter
 		:quant 10000
-		:unit ( r / rupiah ) ) )
+		:unit ( r / rupiah )
+		:mod ( h / hanya ) )
+	:time ( s2 / sekarang ) )
 
 # ::id 19
 # ::snt Jarak sekolah dan rumahku tidak terlalu jauh
@@ -273,7 +275,7 @@
 		:wiki -
 		:name ( n / nama
 			:op1 "Ranti" ) )
-	:manner ( p / pelan ) )
+	:manner ( p / perlahan ) )
 
 # ::id 30
 # ::snt Pak Andre memecahkan gelas dengan sengaja
@@ -310,7 +312,7 @@
 ( j / jahit-01 
 	:ARG0 ( i / ibu )
 	:ARG1 ( b / baju )
-	:manner ( r / rapi-01 ) )
+	:manner ( r / rapi ) )
 
 # ::id 34
 # ::snt Rini menulis surat dengan komputer
@@ -339,7 +341,7 @@
 # ::snt Adik berlari dengan sangat kencang
 ( l / lari-01 
 	:ARG0 ( a / adik )
-	:manner ( c / cepat-01
+	:manner ( c / cepat
 		:degree ( s / sangat ) ) )
 
 # ::id 37
@@ -372,7 +374,7 @@
 ( g / gerak-01
 	:ARG1 ( m / mobil
 		:mod ( i / itu ) )
-	:manner ( c / cepat-01
+	:manner ( c / cepat
 		:degree ( s / sangat ) ) )
 
 # ::id 41
@@ -460,9 +462,9 @@
 			:op1 "Mirna" ) )
 	:ARG1 ( k / kacamata
 		:poss o )
-	:instrument ( l / lembar
-		:mod ( t / tisu
-			:ARG1-of ( b2 / basah-01 ) ) ) )
+	:instrument ( t / tisu
+		:ARG1-of ( b2 / basah-01 )
+		:quant ( l / lembar ) ) )
 
 # ::id 50
 # ::snt Jesica menyeduhkan kopi kesukaan ayahnya
@@ -489,7 +491,7 @@
 			:ARG1-of ( m / memiliki-derajat-91
 				:ARG2 ( b2 / baru )
 				:ARG3 ( p2 / paling ) ) ) )
-	:beneficiary ( a / aku ) )
+	:ARG2 ( a / aku ) )
 
 # ::id 52
 # ::snt Pemulung itu memunguti sampah yang bisa didaur ulang
@@ -628,7 +630,8 @@
 		:ARG0 o
 		:time ( e / entitas-tanggal
 			:dayperiod ( m / malam
-				:mod ( k / kemarin ) ) ) ) )
+				:mod ( k / kemarin ) ) ) )
+	:time e )
 
 # ::id 65
 # ::snt Anggi membeli kue di toko
