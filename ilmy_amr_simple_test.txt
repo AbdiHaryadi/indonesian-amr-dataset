@@ -26,10 +26,9 @@
 # ::id 4
 # ::snt Angga Anak Ajaib
 ( a / anak
-	:domain ( o / orang
-		:wiki -
-		:name ( n / nama 
-			:op1 "Angga" ) )
+	:wiki -
+	:name ( n / nama 
+		:op1 "Angga" )
 	:mod ( a2 / ajaib ) )
 
 # ::id 5
@@ -1497,351 +1496,376 @@
 			:op1 "Andi" ) )
 	:destination ( s / sekolah ) )
 
-# ::id 245
+# ::id 149
 # ::snt ani mendapat nilai bagus pada hari pertama
-( d / dapat 
-	:ARG0 ( a / ani )
-	:ARG1 ( n / nilai 
-		:mod ( b / bagus ))
-	:time ( h / hari 
-		:mod ( p / pertama ))
-)
+( d / dapat
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Ani" ) )
+	:ARG1 ( n2 / nilai
+		:mod ( b / bagus ) )
+	:time ( h / hari
+		:ord ( e / entitas-ordinal
+			:value 1 ) ) )
 
-# ::id 245
+# ::id 150
 # ::snt Andre berangkat ke sekolah pada enam pagi
-( b / berangkat 
-	:ARG0 ( a / andre )
-	:location ( s / sekolah )
-	:time ( e / enam 
-		:mod ( p / pagi))
-)
+( p / pergi-02
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / name
+			:op1 "Andre" ) )
+	:destination ( s / sekolah )
+	:time ( e / entitas-tanggal
+		:time 6:00 ) )
 
-# ::id 245
+# ::id 151
 # ::snt Sejak kemarin sore, dinda pulang ke rumah
-( p / pulang 
-	:ARG0 ( d / dinda )
-	:location ( r / rumah )
-	:time ( s1 / sejak 
-		:mod ( k / kemarin 
-			:mod ( s2 / sore )))
-)
+( p / pulang-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Dinda" ) )
+	:time ( e / entitas-tanggal
+		:dayperiod ( s / sore
+			:mod ( k / kemarin ) ) ) )
 
-# ::id 245
+# ::id 152
 # ::snt Musim kemarau terjadi di bulan Oktober
-( j / jadi 
-	:ARG0 ( m / musim 
-		:mod ( k / kemarau ))
-	:time ( b / bulan 
-		:mod ( o / oktober ))
-)
+( t / terjadi-pada-91
+	:ARG1 ( m / musim
+		:mod ( k / kemarau ) )
+	:ARG2 ( e / entitas-tanggal
+		:month 10 ) )
 
-# ::id 245
+# ::id 153
 # ::snt Andre dapat mendengar dengan baik sejak kecil
-( d1 / dapat 
-	:ARG0 ( a / andre )
-	:ARG1 ( d2 / dengar 
-		:mod ( b / baik ))
-	:time ( s / sejak 
-		:mod ( k / kecil ))
-)
+( b / bisa-01
+	:ARG1 ( d / dengar-01
+		:ARG0 ( o / orang
+			:wiki -
+			:name ( n / nama
+				:op1 "Andre" ) )
+		:manner ( b2 / baik )
+		:time ( s / sejak
+			:op1 ( m / muda-01
+				:ARG1 o ) ) ) )
 
-# ::id 245
+# ::id 154
 # ::snt Nuryati pindah ke Bandung setelah menikah
-( p / pindah 
-	:ARG0 ( n1 / nuryati )
-	:location ( b / bandung )
-	:time ( t / telah 
-		:mod ( n2 / nikah ))
-)
+( p / pindah-01
+	:ARG1 ( o / orang
+		:wiki -
+		:name ( n / nama 
+			:op1 "Nuryati" )
+	:destination ( k / kota
+		:wiki "Kota_Bandung"
+		:name ( n2 / nama
+			:op1 "Bandung" ) ) )
+	:time ( t / telah
+		:op1 ( n / nikah-01
+			:ARG1 o ) ) )
 
-# ::id 245
+# ::id 155
 # ::snt Obat itu diminum setelah makan siang
-( m1 / minum 
-	:ARG1 ( o / obat )
-	:time ( s1 / setelah 
-		:mod ( m2 / makan 
-			:mod ( s2 / siang )))
-)
+( m / minum-01
+	:ARG1 ( o / obat
+		:mod ( i / itu ) )
+	:time ( t / telah
+		:op1 ( m / makan-01
+			:time ( e / entitas-tanggal
+				:dayperiod ( s / siang ) ) ) ) )
 
-# ::id 245
+# ::id 156
 # ::snt Matahari terbit di pagi hari
-(t / terbit 
-	:ARG0 ( m / matahari )
-	:time ( p / pagi 
-		:mod ( h / hari ))
-)
+( t / terbit-01
+	:ARG1 ( m / matahari )
+	:time ( e / entitas-tanggal
+		:dayperiod ( p / pagi ) ) )
 
-# ::id 245
+# ::id 157
 # ::snt Saat fajar tiba terdengar suara ayam jantan berkokok
-( d / dengar 
-	:ARG1 ( s1 / suara 
-		:mod ( a / ayam 
-			:mod ( j / jantan 
-				:mod ( k / kokok ))))
-	:time ( f / fajar
-		:mod ( s2 / saat  
-			:mod ( t / tiba )))
-)
+( d / dengar-01
+	:ARG1 ( s / suara
+		:source ( k / kokok-01
+			:ARG1 ( a / ayam
+				:mod ( j / jantan ) ) ) )
+	:time ( e / entitas-tanggal
+		:dayperiod ( f / fajar ) ) )
 
-# ::id 245
+# ::id 158
 # ::snt Ayah pergi memancing seminggu sekali
-( p1 / pergi 
+( p / pergi-01
 	:ARG0 ( a / ayah )
-	:ARG1 ( p2 / pangcing )
-	:time ( m / minggu 
-		:mod ( k / kali ))
-)
+	:purpose ( p2 / pancing-01
+		:ARG0 a )
+	:frequency ( e / entitas-laju-91
+		:ARG2 ( e2 / entitas-temporal
+			:quant 1
+			:unit ( m / minggu ) ) ) )
 
-# ::id 245
+# ::id 159
 # ::snt Pak Ilham masuk kantor
-( m / masuk 
-	:ARG0 ( p / pak 
-		:mod ( i / ilham ))
-	:location ( k / kantor )
-)
+( m / masuk-02
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Ilham" ) )
+	:destination ( k / kantor ) )
 
-# ::id 245
+# ::id 160
 # ::snt Zaman dahulu terdapat banyak kerajaan di indonesia
-( d1 / dapat 
+( k / kerajaan
+	:location ( n / negara
+		:wiki "Indonesia"
+		:name ( n2 / nama
+			:op1 "Indonesia" ) )
 	:mod ( b / banyak )
-	:ARG0 ( r / raja )
-	:location ( i / indonesia )
-	:time ( z / zaman 
-		:mod ( d2 / dahulu ))
-)
+	:time ( z / zaman
+		:mod ( d / dahulu ) ) )
 
-# ::id 245
+# ::id 161
 # ::snt Pakcoy bertumbuhan ketika musim kemarau
-( t / tumbuh 
-	:ARG0 ( p / pakcoy )
-	:time ( m / musim 
-		:mod ( k / kemarau ))
-)
+( t / tumbuh-01
+	:ARG1 ( p / pakcoi )
+	:time ( m / musim
+		:mod ( k / kemarau ) ) )
 
-# ::id 245
+# ::id 162
 # ::snt Sekarang kami dapat berkomunikasi dengan mudah
-( d / dapat 
-	:ARG0 ( k1 / kami )
-	:ARG1 ( k2 / komunikasi 
-		:mod ( m / mudah ))
-	:time ( s / sekarang )
-)
+( b / bisa-01
+	:ARG1 ( h / hubung-01
+		:ARG0 ( k / kami ) )
+		:manner ( m / mudah ) )
 
-# ::id 245
+# ::id 163
 # ::snt Banyak hal yang perlu dibahas saat rapat nanti
-( p / perlu 
-	:ARG0 ( h / hal 
-		:mod ( b1 / banyak ))
-	:ARG1 ( b2 / bahas )
-	:time ( r / rapat 
-		:mod ( n / nanti ))
-)
+( h / hal
+	:mod ( b / banyak )
+	:ARG1-of ( b2 / bahas-01
+		:ARG1-of ( p / perlu-01 )
+		:time ( r / rapat
+			:time ( n / nanti ) ) ) )
 
-# ::id 245
+# ::id 164
 # ::snt Upacara penurunan bendera dilaksanakan pada hari Sabtu
-(l / laksana 
-	:ARG1 ( u / upacara 
-		:mod ( t / turun 
-			:mod ( b / bendera )))
-	:time ( h / hari 
-		:mod ( s / sabtu ))
-)
+( t / terjadi-pada-91
+	:ARG1 ( u / upacara
+		:mod ( t / turun-01
+			:ARG1 ( b / bendera ) ) )
+	:ARG2 ( e / entitas-tanggal
+		:weekday ( s / sabtu ) ) )
 
-# ::id 245
+# ::id 165
 # ::snt Kakek menanam cabe di halaman tadi pagi
-( t1 / tanam 
+( t / tanam-01
 	:ARG0 ( k / kakek )
-	:ARG1 ( c / cabe )
+	:ARG1 ( c / cabai )
 	:location ( h / halaman )
-	:time ( t2 / tadi 
-		:mod ( p / pagi ))
-)
+	:time ( e / entitas-tanggal
+		:dayperiod ( p / pagi
+			:mod ( i / ini ) ) ) )
 
-# ::id 245
+# ::id 166
 # ::snt Upacara proklamasi dimulai jam sepuluh pagi
-( m / mulai 
-	:ARG1 ( u / upacara 
-		:mod ( p1 / proklamasi ))
-	:time ( j / jam 
-		:mod ( s / sepuluh 
-			:mod ( p2 / pagi )))
-)
+( m / mulai-01
+	:ARG1 ( u / upacara
+		:mod ( p / proklamasi-01 ) )
+	:time ( e / entitas-tanggal
+		:time 10:00 ) )
 
-# ::id 245
+# ::id 167
 # ::snt Kemerdekaan Indonesia diproklamirkan pada tanggal 17 Agustus 1945 oleh Bapak Soekarno
-( p / proklamir 
-	:ARG1 ( m / merdeka 
-		:mod ( i / indonesia ))
-	:time ( t / tanggal
-		:mod ( vv1 / 17 
-			:mod ( a / agustus 
-				:mod ( vv2 / 1945 )))
-	)
-	:ARG0 ( b / bapak 
-		:name ( s / soekarno ))
-)
+( p / proklamasi-01
+	:ARG0 ( o / orang
+		:wiki "Soekarno"
+		:name ( n / nama
+			:op1 "Bapak"
+			:op2 "Soekarno" ) )
+	:ARG1 ( m / merdeka-01
+		:ARG1 ( n2 / negara
+			:wiki "Indonesia"
+			:name ( n3 / nama
+				:op1 "Indonesia" ) ) )
+	:time ( e / entitas-tanggal
+		:year 1945
+		:month 8
+		:day 17 ) )
 
-# ::id 245
+# ::id 168
 # ::snt Dinda berangkat ke jakarta tiga hari yang lalu
-( b / berangkat
-	:ARG0 ( d / dinda )
-	:location ( j / jakarta )
-	:time ( t / tiga 
-		:mod ( h / hari 
-			:mod ( l / lalu )))
-)
+( p / pergi-02
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Dinda" ) )
+	:destination ( k / kota
+		:wiki "Daerah_Khusus_Ibukota_Jakarta"
+		:name ( n2 / nama
+			:op1 "Jakarta" ) )
+	:time ( b / belum
+		:op1 ( s / sekarang )
+		:duration ( k2 / kuantitas-temporal
+			:unit ( h / hari )
+			:quant 3 ) ) )
 
-# ::id 245
+# ::id 169
 # ::snt Senam kesegaran jasmani dilaksanakan setiap senin
-( l / laksana 
-	:ARG0 ( s1 / senam 
-		:mod ( s2 / segar 
-			:mod ( j / jasmani ) ))
-	:time ( t / tiap 
-		:mod ( s4 / senin ))
-)
+( m / memiliki-frekuensi-91
+	:ARG1 ( s / senam
+		:mod ( s2 / segar-01
+			:ARG1 ( j / jasmani ) ) )
+	:ARG2 ( e / entitas-laju-91
+		:ARG4 ( e2 / entitas-tanggal
+			:weekday ( s2 / senin ) ) ) )
 
-# ::id 245
+# ::id 170
 # ::snt Dia terlihat antusias setiap kali membicarakan politik
-( l / lihat 
-	:ARG1 ( d / dia )
-	:mod ( a / antusias )
-	:time ( t / tiap 
-		:mod ( b / bicara 
-			:ARG0 ( p / politik )))
-)
+( l / lihat-01
+	:ARG1 ( a / antusias
+		:domain ( d / dia )
+		:frequency ( e / entitas-laju-91
+			:ARG4 ( b / bicara-01
+				:ARG0 d
+				:ARG1 ( p / politik ) ) ) ) )
 
-# ::id 245
+# ::id 171
 # ::snt Dia sedih saat ingat kejadian waktu itu
-( s1 / sedih 
-	:ARG0 ( d / dia )
-	:time ( i / ingat
-		:ARG1 ( j / jadi
-			:time ( w / waktu )   
-				:mod ( s2 / saat)))
-)
+( s / sedih-01
+	:ARG1 ( d / dia )
+	:time ( i / ingat-01
+		:ARG0 d
+		:ARG1 ( p / peristiwa
+			:mod ( i2 / itu ) ) ) )
 
-# ::id 245
+# ::id 172
 # ::snt Peristiwa Pemberontakan G-30-S PKI terjadi pada tahun 1965
-( j / jadi 
-	:ARG0 ( p1 / peristiwa 
-		:mod ( b / berontak 
-			:name ( vv1 / g-30-s 
-				:mod ( p2 / pki )))
-	:time ( t / tahun 
-		:mod ( vv2 / 1965 ))
-	)
-)
+( t / terjadi-pada-91
+	:ARG1 ( p / peristiwa
+		:wiki "Gerakan_30_September"
+		:name ( n / nama
+			:op1 "G-30-S"
+			:op2 "PKI" )
+		:mod ( b / berontak-01 ) )
+	:ARG2 ( e / entitas-tanggal
+		:year 1965 ) )
 
-# ::id 245
+# ::id 173
 # ::snt Air selokan meluap pukul enam pagi
-( l / luap 
-	:ARG0 ( a / air 
-		:mod ( s / selok ))
-	:time ( p1 / pukul 
-		:mod ( e / enam 
-			:mod ( p2 / pagi )))
-)
+( l / luap-01
+	:ARG0 ( a / air
+		:source ( s / selokan ) )
+	:time ( e / entitas-tanggal
+		:time 6:00 ) )
 
-# ::id 245
+# ::id 174
 # ::snt Besok lusa saya berangkat ke bandung
-( b / berangkat 
-	:ARG0 ( s / saya )
-	:location ( b2 / bandung )
-	:time ( b3 / besok 
-		:mod ( l / lusa ))
-)
+( p / pergi-02
+	:ARG0 ( a / aku )
+	:destination ( k / kota
+		:wiki "Kota_Bandung"
+		:name ( n / nama
+			:op1 "Bandung" ) )
+	:time ( l / lusa ) )
 
-# ::id 245
+# ::id 175
 # ::snt Waktu kecil andre diajak ibu pergi mengunjungi nenek
-( a1 / ajak 
-	:ARG1 ( a2 / andre )
+( a / ajak-01
 	:ARG0 ( i / ibu )
-	:mod ( p / pergi 
-		:mod ( k1 / kunjung 
-			:ARG1 ( n / nenek )))
-	:time ( w / waktu 
-		:mod ( k2 / kecil ))
-)
+	:ARG1 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Andre" ) )
+	:ARG2 ( p / pergi-01
+		:ARG0 o
+		:purpose ( k / kunjung-01
+			:ARG0 o
+			:ARG1 ( n2 / nenek ) ) )
+	:time ( m / muda-01
+		:ARG1 o ) )
 
-# ::id 245
+# ::id 176
 # ::snt Saat hujan, udara terasa lebih panas
-( r / rasa 
-	:ARG1 ( u / udara )
-	:mod ( p / panas 
-		:mod ( l / lebih ))
-	:time ( h / hujan 
-		:mod ( s / saat ))
-)
+( r / rasa-01
+	:ARG1 ( m / memiliki-derajat-91
+		:ARG1 ( u / udara )
+		:ARG2 ( p / panas )
+		:ARG3 ( l / lebih ) )
+	:time ( h / hujan ) )
 
-# ::id 245
+# ::id 177
 # ::snt Saya berjumpa dengan dinda
-( j / jumpa
-	:ARG0 ( s / saya )
-	:ARG1 ( d / dinda )
-)
+( t / temu-01
+	:ARG0 ( a / aku )
+	:ARG1 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Dinda" ) ) )
 
-# ::id 245
+# ::id 178
 # ::snt Saat sakit kita menyadari pentingnya menjaga kesehatan
-( s1 / sadar 
+( s / sadar-01
 	:ARG0 ( k / kita )
-	:ARG1 ( p / penting 
-		:mod ( j / jaga 
-			:ARG1 ( s2 / sehat )))
-	:time ( s4 / sakit 
-		:mod ( s3 / saat  ))
-)
+	:ARG1 ( p / penting-01
+		:ARG1 ( j / jaga-01
+			:ARG0 k
+			:ARG1 ( s2 / sehat ) ) )
+	:time ( s3 / sakit-01
+		:ARG1 k ) )
 
-# ::id 245
+# ::id 179
 # ::snt Acara seminar dimulai satu jam lagi
-(m / mulai 
-	:ARG0 ( a / acara 
-		:mod ( s1 / seminar ))
-	:time ( s2 / satu 
-		:mod ( j / jam 
-			:mod ( l / lagi )))
-)
+( m / mulai-01
+	:ARG1 ( a / acara
+		:mod ( s / seminar ) )
+	:time ( t / telah
+		:op1 ( s2 / sekarang ) )
+		:quant ( k / kuantitas-temporal
+			:quant 1
+			:unit ( j / jam ) ) )
 
-# ::id 245
-# ::snt Kami  menunggu di stasiun sejak tiga jam lalu
-( t1 / tunggu 
+# ::id 180
+# ::snt Kami menunggu di stasiun sejak tiga jam lalu
+( t / tunggu-01
 	:ARG0 ( k / kami )
-	:location ( s1 / stasiun)
-	:time ( s2 / sejak 
-		:mod ( t2 / tiga 
-			:mod ( j / jam 
-				:mod ( l / lalu ))))
-)
+	:location ( s / stasiun )
+	:duration ( k2 / kuantitas-temporal
+		:quant 3
+		:unit ( j / jam ) ) )
 
-# ::id 245
+# ::id 181
 # ::snt Aku mencuci kaki sebelum tidur
-( c / cuci 
+( c / cuci-01
 	:ARG0 ( a / aku )
 	:ARG1 ( k / kaki )
-	:time ( b / belum 
-		:mod ( t / tidur ))
-)
+	:time ( b / belum
+		:op1 ( t / tidur-01
+			:ARG1 a ) ) )
 
-# ::id 245
+# ::id 182
 # ::snt Kita menjaga persatuan bangsa mulai sekarang 
-( j / jaga 
+( m / mulai-01
 	:ARG0 ( k / kita )
-	:ARG1 ( s1 / satu 
-		:mod ( b / bangsa ))
-	:time ( m / mulai 
-		:mod ( s2 / sekarang ))
-)
+	:ARG1 ( j / jaga-01
+		:ARG0 k
+		:ARG1 ( p / persatuan
+			:mod ( b / bangsa ) ) )
+	:time ( s / sekarang ) )
 
-# ::id 245
+# ::id 183
 # ::snt Pak Puguh bisa hadir pada sore hari ini
-( b / bisa
-	:ARG0 ( p1 / pak 
-		:name ( p2 / puguh ))
-	:ARG1 ( h1 / hadir )
-	:time ( s / sore
-		:mod ( h2 / hari 
-			:mod ( i / ini )))
-)
+( b / bisa-01
+	:ARG1 ( h / hadir-01
+		:ARG0 ( o / orang
+			:wiki -
+			:name ( n / nama
+				:op1 "Pak"
+				:op2 "Puguh" ) )
+		:time ( e / entitas-tanggal
+			:dayperiod ( s / sore
+				:mod ( i / ini ) ) ) ) )
 
 # ::id 245
 # ::snt Toko buku buka jam 8 pagi
