@@ -601,7 +601,7 @@
 	:ARG0 ( a / adik )
 	:ARG1 ( b2 / buku
 		:ARG0-of ( a2 / ajar-01
-			:ARG1 a ) )
+			:ARG2 a ) )
 	:location ( k / kamar
 		:poss a ) )
 
@@ -936,7 +936,7 @@
 # ::id 95
 # ::snt Arlita sedang belajar di sekolah
 ( a / ajar-01
-	:ARG1 ( o / orang
+	:ARG2 ( o / orang
 		:wiki -
 		:name ( n / nama
 			:op1 "Arlita" ) )
