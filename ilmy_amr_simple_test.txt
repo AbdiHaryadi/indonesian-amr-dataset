@@ -2397,474 +2397,497 @@
 		:name (p1/prapto))
 	:ARG1 (p2/pupuk))
  
-# ::id 245
+# ::id 247
 # ::snt Petani menanam padi
-
-(t1/tanam
-	:ARG0 (t2/tani)
-	:ARG1 (p2/padi))
+( t / tanam-01
+	:ARG0 ( o / orang
+		:ARG0-of ( t / tani-01 ) )
+	:ARG1 ( p / padi ) )
 	
-# ::id 245
+# ::id 248
 # ::snt Padi ditanam petani
-
-(t1/tanam
-	:ARG0 (t2/tani)
-	:ARG1 (p2/padi))
- 
+( t / tanam-01
+	:ARG0 ( o / orang
+		:ARG0-of ( t / tani-01 ) )
+	:ARG1 ( p / padi ) )
 	
-# ::id 245
+# ::id 249
 # ::snt Pemborong membeli hasil panen
-
-(b1/beli
-		:ARG0 (b2/borong)
-		:ARG1 (h/hasil
-				:mod (p/panen)))
+( b / beli-01
+	:ARG0 ( o / orang
+		ARG0-of ( b / borong-01 ) )
+	:ARG1 ( h / hasil
+		:mod ( p / panen ) ) )
  
-# ::id 245
+# ::id 250
 # ::snt Hasil panen dibeli pemborong
-
-(b1/beli
-		:ARG0 (b2/borong)
-		:ARG1 (h/hasil
-				:mod (p/panen)))
+( b / beli-01
+	:ARG0 ( o / orang
+		ARG0-of ( b / borong-01 ) )
+	:ARG1 ( h / hasil
+		:mod ( p / panen ) ) )
  
-# ::id 245
+# ::id 251
 # ::snt Tengkulak memeras petani
-
-(p1/peras
-		:ARG0 (t1/tengkulak)
-		:ARG1 (t2/tani))
+( p / peras-01
+	:ARG0 ( t / tengkulak )
+	:ARG1 ( p2 / petani ) )
  
-# ::id 245
+# ::id 252
 # ::snt Petani diperas tengkulak
-
-(p1/peras
-		:ARG0 (t1/tengkulak)
-		:ARG1 (t2/tani))
+( p / peras-01
+	:ARG0 ( t / tengkulak )
+	:ARG1 ( p2 / petani ) )
  
-# ::id 245
+# ::id 253
 # ::snt Adik menonton kartun di televisi
+( t / tonton-01
+	:ARG0 ( a / adik )
+	:ARG1 ( k / kartun )
+	:location ( t2 / telivisi ) )
  
-(t1/tonton
-	:ARG0 (a/adik)
-	:ARG1 (k/kartun)
-	:location (t2/televisi))
- 
-# ::id 245
+# ::id 254
 # ::snt Kartun ditonton adik di televisi
+( t / tonton-01
+	:ARG0 ( a / adik )
+	:ARG1 ( k / kartun )
+	:location ( t2 / telivisi ) )
  
-(t1/tonton
-	:ARG0 (a/adik)
-	:ARG1 (k/kartun)
-	:location (t2/televisi))
- 
-# ::id 245
+# ::id 255
 # ::snt Ibu Raska menuang air
+( t / tuang-01
+	:ARG0 ( a / air )
+	:ARG1 ( o / orang
+		:wiki - 
+		:name ( n / nama
+			:op1 "Ibu"
+			:op2 "Raska" ) ) )
  
-(t/tuang
-	:ARG0 (i/ibu
-		:name ( r /raska ))
-	:ARG1 (a/air))
- 
-# ::id 245
+# ::id 256
 # ::snt Air dituang Ibu Raska
+( t / tuang-01
+	:ARG0 ( a / air )
+	:ARG1 ( o / orang
+		:wiki - 
+		:name ( n / nama
+			:op1 "Ibu"
+			:op2 "Raska" ) ) )
  
-(t/tuang
-	:ARG0 (i/ibu
-		:name ( r /raska ))
-	:ARG1 (a/air))
- 
-# ::id 245
+# ::id 257
 # ::snt Pak Zee Zee menceritakan kisah tragisnya
+( c / cerita-01
+	:ARG0 ( o / orang
+		:wiki - 
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Zee Zee" ) )
+	:ARG1 ( k / kisah
+		:manner ( t / tragis )
+		:poss o ) )
  
-(c/cerita
-	:ARG0 (p / pak 
-		:name ( z1 / zee  
-			:name ( z2 / zee )))
-	:ARG1 (k/kisah
-			:mod (t/tragis)))
- 
-# ::id 245
+# ::id 258
 # ::snt Kisah tragisnya diceritakan Pak Zee Zee
+( c / cerita-01
+	:ARG0 ( o / orang
+		:wiki - 
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Zee Zee" ) )
+	:ARG1 ( k / kisah
+		:manner ( t / tragis )
+		:poss o ) )
  
-(c/cerita
-	:ARG0 (p / pak 
-		:name ( z1 / zee  
-			:name ( z2 / zee )))
-	:ARG1 (k/kisah
-			:mod (t/tragis)))
- 
-# ::id 245
+# ::id 259
 # ::snt Satpam menangkap pencuri
- 
-(t/tangkap
-	:ARG0 (s/saptam)
-	:ARG1 (c/curi))
-
-# ::id 245
+( t / tangkap-01
+	:ARG0 ( s / satpam )
+	:ARG1 ( o / orang
+		:ARG1-of ( c / curi ) ) )
+# ::id 260
 # ::snt Pencuri ditangkap Satpam
+( t / tangkap-01
+	:ARG0 ( s / satpam )
+	:ARG1 ( o / orang
+		:ARG1-of ( c / curi ) ) )
  
-(t/tangkap
-	:ARG0 (s/saptam)
-	:ARG1 (c/curi))
- 
-# ::id 245
+# ::id 261
 # ::snt Kakak mengepel lantai
+( p / pel-01
+	:ARG0 ( k / kakak )
+	:ARG1 ( l / lantai ) )
  
-(p/pel
-	:ARG0 (k/kakak)
-	:ARG1 (l/lantai))
- 
-# ::id 245
+# ::id 262
 # ::snt Lantai dipel kakak
+( p / pel-01
+	:ARG0 ( k / kakak )
+	:ARG1 ( l / lantai ) )
  
-(p/pel
-	:ARG0 (k/kakak)
-	:ARG1 (l/lantai))
- 
-# ::id 245
+# ::id 263
 # ::snt Tentara menjaga perdamaian di Indonesia
- 
-(j/jaga
-	:ARG0 (t/tentara)
-	:ARG1 (d/damai)
-	:location (i/indonesia))
+( j / jaga-01
+	:ARG0 ( t / tentara )
+	:ARG1 ( d / damai )
+	:ARG2 ( n / negara
+		:wiki "Indonesia"
+		:name ( n / nama
+			:op1 "Indonesia" ) ) )
 
-# ::id 245
+# ::id 264
 # ::snt Perdamaian dijaga tentara di Indonesia
- 
-(j/jaga
-	:ARG0 (t/tentara)
-	:ARG1 (d/damai)
-	:location (i/indonesia))
+( j / jaga-01
+	:ARG0 ( t / tentara )
+	:ARG1 ( d / damai )
+	:ARG2 ( n / negara
+		:wiki "Indonesia"
+		:name ( n / nama
+			:op1 "Indonesia" ) ) )
 
-# ::id 245
+# ::id 265
 # ::snt Ayah mencari nafkah
+( c / cari-01
+	:ARG0 ( a / ayah )
+	:ARG1 ( n / nafkah ) )
  
-(c/cari
-	:ARG0 (a/ayah)
-	:ARG1 (n/nafkah))
- 
-# ::id 245
+# ::id 266
 # ::snt Nafkah dicari ayah
+( c / cari-01
+	:ARG0 ( a / ayah )
+	:ARG1 ( n / nafkah ) )
  
-(c/cari
-	:ARG0 (a/ayah)
-	:ARG1 (n/nafkah))
- 
-# ::id 245
+# ::id 267
 # ::snt Ibu memberi makan
+( b / beri-01
+	:ARG0 ( i / ibu )  
+	:ARG1 ( m / makan ) )
  
-(b/beri
-	:ARG0 (i/ibu)
-	:ARG1 (m/makan))
- 
-# ::id 245
+# ::id 268
 # ::snt Makan diberi ibu
+( b / beri-01
+	:ARG0 ( i / ibu )  
+	:ARG1 ( m / makan ) )
  
-(b/beri
-	:ARG0 (i/ibu)
-	:ARG1 (m/makan))
- 
-# ::id 245
+# ::id 269
 # ::snt Adik menerima uang
+( t / terima-01
+	:ARG0 ( a / adik )
+	:ARG1 ( u / uang ) )
  
-(t/terima
-		:ARG0 (a/adik)
-		:ARG1 (u/uang))
- 
-# ::id 245
+# ::id 270
 # ::snt Uang diterima adik
+( t / terima-01
+	:ARG0 ( a / adik )
+	:ARG1 ( u / uang ) )
  
-(t/terima
-		:ARG0 (a/adik)
-		:ARG1 (u/uang))
- 
-# ::id 245
+# ::id 271
 # ::snt Kakak Byan menghabiskan uang
- 
-(h/habis
-	:ARG0 (k/kakak
-		:name ( b / byan ))
-	:ARG1 (u/uang))
- 
-# ::id 245
+( h / habis-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Kakak"
+			:op2 "Byan" ) )
+	:ARG1 ( u / uang ) )
+
+# ::id 272
 # ::snt Uang dihabiskan Kakak Byan
+( h / habis-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Kakak"
+			:op2 "Byan" ) )
+	:ARG1 ( u / uang ) )
  
-(h/habis
-	:ARG0 (k/kakak
-		:name ( b / byan ))
-	:ARG1 (u/uang))
- 
-# ::id 245
+# ::id 273
 # ::snt Massa membakar mobil di jalanan
+( b / bakar-01
+	:ARG0 ( m / massa )
+	:ARG1 ( m2 / mobil 
+	:location ( j / jalan ) )
  
-(b/bakar
-	:ARG0 (m1/massa)
-	:ARG1 (m2/mobil)
-	:location (j/jalan))
- 
-# ::id 245
+# ::id 274
 # ::snt Mobil dibakar massa  di jalanan
- 
-(b/bakar
-	:ARG0 (m1/massa)
-	:ARG1 (m2/mobil)
-	:location (j/jalan))
+( b / bakar-01
+	:ARG0 ( m / massa )
+	:ARG1 ( m2 / mobil 
+	:location ( j / jalan ) )
   
-# ::id 245
+# ::id 275
 # ::snt Warga menangkap babi di hutan
- 
-(t/tangkap
-	:ARG0 (w/warga)
-	:ARG1 (b/babi)
-	:location (h/hutan))
+( t / tangkap-01
+	:ARG0 ( w / warga )
+	:ARG1 ( b / babi )
+	:location ( h / hutan ) )
 
-# ::id 245
+# ::id 276
 # ::snt Babi ditangkap warga di hutan
- 
-(t/tangkap
-	:ARG0 (w/warga)
-	:ARG1 (b/babi)
-	:location (h/hutan))
+( t / tangkap-01
+	:ARG0 ( w / warga )
+	:ARG1 ( b / babi )
+	:location ( h / hutan ) )
 
-# ::id 245
+# ::id 277
 # ::snt Kak Zahra menjual kue
- 
-(j/jual
-	:ARG0 (k1 / kak 
-		:name (z/zahra))
-	:ARG1 (k2/kue))
+( j / jual-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Kak"
+			:op2 "Zahra" ) )
+	:ARG1 ( k / kue ) )
 
-# ::id 245
+# ::id 278
 # ::snt Kue dijual Kak Zahra
+( j / jual-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Kak"
+			:op2 "Zahra" ) )
+	:ARG1 ( k / kue ) )
  
-(j/jual
-	:ARG0 (k1 / kak 
-		:name (z/zahra))
-	:ARG1 (k2/kue))
- 
-# ::id 245
+# ::id 279
 # ::snt Adik melompat
+( l / lompat-01
+	:ARG0 ( a / adik ) )
  
-(l/lompat
-		:ARG0 (a/adik))
- 
-# ::id 245
+# ::id 280
 # ::snt Pengacara membela tersangka di pengadilan
-
-(b/bela
-	:ARG0 (a1/acara)
-	:ARG1 (s/sangka)
-	:location (a2/adil))
+( b / bela-01
+	:ARG0 ( a / advokat )
+	:ARG1 ( o / orang
+		:ARG1-of ( s / sangka-01 ) )
+	:location (b2 / bangunan
+		:mod ( a / adil ) ) )
  
-# ::id 245
+# ::id 281
 # ::snt Tersangka dibela Pengacara di pengadilan
-
-(b/bela
-	:ARG0 (a1/acara)
-	:ARG1 (s/sangka)
-	:location (a2/adil))
+( b / bela-01
+	:ARG0 ( a / advokat )
+	:ARG1 ( o / orang
+		:ARG1-of ( s / sangka-01 ) )
+	:location (b2 / bangunan
+		:mod ( a / adil ) ) )
  
-# ::id 245
+# ::id 282
 # ::snt Hakim Roger menjatuhi hukuman
+( j / jatuh-02
+	:ARG0 ( o / orang
+		:wiki - 
+		:name ( n / nama
+			:op1 "Roger" ) )
+	:ARG0-of ( m / memiliki-peran-org-91
+		:ARG1 ( h / hakim ) )
+	:ARG1 ( h2 / hukum ) )
  
-(j/jatuh
-	:ARG0 (h1/hakim
-		:name ( r / roger ))
-	:ARG1 (h2/hukum))
- 
-# ::id 245
+# ::id 283
 # ::snt Hukuman dijatuhkan Hakim Roger
+( j / jatuh-02
+	:ARG0 ( o / orang
+		:wiki - 
+		:name ( n / nama
+			:op1 "Roger" ) )
+	:ARG0-of ( m / memiliki-peran-org-91
+		:ARG1 ( h / hakim ) )
+	:ARG1 ( h2 / hukum ) ) 
  
-(j/jatuh
-	:ARG0 (h1/hakim
-		:name ( r / roger ))
-	:ARG1 (h2/hukum))
- 
-# ::id 245
+# ::id 284
 # ::snt Jaksa menuntut tersangka di pengadilan
+( t / tuntut-01
+	:ARG0 ( j / jaksa)
+	:ARG1 ( o / orang
+		ARG1-of ( s / sangka ) )
+	:location ( b / bangunan
+		:mod ( a / adil ) ) )
  
-(t/tuntut
-	:ARG0 (j/jaksa)
-	:ARG1 (s/sangka)
-	:location (a/adil))
- 
-# ::id 245
+# ::id 285
 # ::snt Tersangka dituntut Jaksa di pengadilan
+( t / tuntut-01
+	:ARG0 ( j / jaksa)
+	:ARG1 ( o / orang
+		ARG1-of ( s / sangka ) )
+	:location ( b / bangunan
+		:mod ( a / adil ) ) )
  
-(t/tuntut
-	:ARG0 (j/jaksa)
-	:ARG1 (s/sangka)
-	:location (a/adil))
- 
-# ::id 245
+# ::id 286
 # ::snt Mereka menerima kekalahan
- 
-(t/terima
-	:ARG0 (m/mereka)
-	:ARG1 (k/kalah))
+( t / terima-01
+	:ARG0 ( m / mereka )
+	:ARG1 ( k / kalah ) )
 
-# ::id 245
+# ::id 287
 # ::snt kekalahan diterima mereka
+( t / terima-01
+	:ARG0 ( m / mereka )
+	:ARG1 ( k / kalah ) )
  
-(t/terima
-		:ARG0 (m/mereka)
-		:ARG1 (k/kalah))
- 
-# ::id 245
+# ::id 288
 # ::snt Kami merayakan kemenangan
+( r / raya-01
+	:ARG0 ( k / kami )
+	:ARG1 ( m / menang ) )
  
-(r/raya
-	:ARG0 (k/kami)
-	:ARG1 (m/menang))
- 
-# ::id 245
+# ::id 289
 # ::snt Kemenangan dirayakan kami
+( r / raya-01
+	:ARG0 ( k / kami )
+	:ARG1 ( m / menang ) )
  
-(r/raya
-	:ARG0 (k/kami)
-	:ARG1 (m/menang))
- 
-# ::id 245
+# ::id 290
 # ::snt Gubernur Anis menyampaikan keluhan
+( b / beri-01
+	:ARG0 ( o / orang
+		:wiki "Anies_Baswedan"
+		:name ( n / nama
+			:op1 "Anis" ) )
+	:ARG0-of (m / memiliki-peran-org-91
+		:ARG1 ( g / gubernur ) )
+	:ARG1 ( k / keluhan ) )
  
-(s/sampai
-	:ARG0 (g / gubernur 
-		:name (a/anis))
-	:ARG1 (k/keluh))
- 
-# ::id 245
+# ::id 291
 # ::snt Keluhan disampaikan Gubernur Anis
+( b / beri-01
+	:ARG0 ( o / orang
+		:wiki "Anies_Baswedan"
+		:name ( n / nama
+			:op1 "Anis" ) )
+	:ARG0-of (m / memiliki-peran-org-91
+		:ARG1 ( g / gubernur ) )
+	:ARG1 ( k / keluhan ) )
  
-(s/sampai
-	:ARG0 (g / gubernur 
-		:name (a/anis))
-	:ARG1 (k/keluh))
- 
-# ::id 245
+# ::id 292
 # ::snt Lusi menggambar
+( g / gambar-01
+    :ARG0 ( o / orang
+        :wiki -
+        :name ( n / nama
+            :op1 "Lusi" ) ) )
  
-(g/gambar
-		:ARG0 (l/lusi))
- 
-# ::id 245
+# ::id 293
 # ::snt Okta melukis perempuan
+( g / gambar-01
+    :ARG0 ( o / orang
+        :wiki -
+        :name ( n / nama
+            :op1 "Okta" ) )
+    :ARG1 ( p / perempuan ) )
  
-(l/lukis
-		:ARG0 (o/okta)
-		:ARG1 (p/perempuan))
- 
-# ::id 245
+# ::id 294
 # ::snt Perempuan dilukis Okta
- 
-(l/lukis
-		:ARG0 (o/okta)
-		:ARG1 (p/perempuan))
+( g / gambar-01
+    :ARG0 ( o / orang
+        :wiki -
+        :name ( n / nama
+            :op1 "Okta" ) )
+    :ARG1 ( p / perempuan ) )
 
-# ::id 245
+# ::id 295
 # ::snt Pak Budi mencetak kartu nama di Sampurna
+( c / cetak-02
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Budi" ) )
+	:ARG1 ( k / kartu
+		:mod ( n2 / nama ) )
+	:location ( s / sampurna ) )
  
-(c/cetak
-	:ARG0 (p / pak 
-		:name (b/budi))
-	:ARG1 (k/kartu
-			:mod (n/nama))
-	:location (s/sampurna))
- 
-# ::id 245
+# ::id 296
 # ::snt Kartu nama dicetak Pak Budi di Sampurna
+( c / cetak-02
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Pak"
+			:op2 "Budi" ) )
+	:ARG1 ( k / kartu
+		:mod ( n2 / nama ) )
+	:location ( s / sampurna ) )
  
-(c/cetak
-	:ARG0 (p / pak 
-		:name (b/budi))
-	:ARG1 (k/kartu
-			:mod (n/nama))
-	:location (s/sampurna))
- 
- 
-# ::id 245
+# ::id 297
 # ::snt KPU menetapkan pemenang
-
-(t/tetap
-		:ARG0 (k/kpu)
-		:ARG1 (m/menang))
+( t / tetap-01
+	:ARG0 ( i / instansi-pemerintah
+		:wiki "Komisi_Pemilihan_Umum_Republik_Indonesia"
+		:name ( n / nama
+	        	:op1 "KPU" )
+	:ARG1 ( o / orang
+		:ARG1-of ( m / menang-01 ) ) ) )
  
-# ::id 245
+# ::id 298
 # ::snt Pemenang ditetapkan KPU
-
-(t/tetap
-	:ARG0 (k/kpu)
-	:ARG1 (m/menang))
+( t / tetap-01
+	:ARG0 ( i / instansi-pemerintah
+		:wiki "Komisi_Pemilihan_Umum_Republik_Indonesia"
+		:name ( n / nama
+	        	:op1 "KPU" )
+	:ARG1 ( o / orang
+		:ARG1-of ( m / menang-01 ) ) ) )
  
-# ::id 245
+# ::id 299
 # ::snt Guru memberi hadiah kepada pemenang
-
-(b/beri
-	:ARG0 (g/guru)
-	:ARG1 (h/hadiah)
-	:mod (m/menang))
+( b / beri-01
+	:ARG0 ( g / guru )
+	:ARG1 ( h / hadiah )
+	:ARG2 ( o / orang
+		:ARG2-of ( m / menang-01 ) ) )
  
-# ::id 245
+# ::id 300
 # ::snt Hadiah diberi guru kepada pemenang
-
-(b/beri
-	:ARG0 (g/guru)
-	:ARG1 (h/hadiah)
-	:mod (m/menang))
+( b / beri-01
+	:ARG0 ( g / guru )
+	:ARG1 ( h / hadiah )
+	:ARG2 ( o / orang
+		:ARG2-of ( m / menang-01 ) ) )
  
-# ::id 245
+# ::id 301
 # ::snt Ibu Rusdi menggendong adik
- 
-(g/gendong
-	:ARG0 (i/ibu
-		:name ( r / rusdi ))
-	:ARG1 (a/adik))
+( g / gendong-01
+	:ARG0 ( o / orang
+		:wiki -
+		:name ( n / nama
+			:op1 "Ibu"
+			:op2 "Rusdi" ) )
+	:ARG1 ( a / adik ) )
 
-# ::id 245
+# ::id 302
 # ::snt Adik digendong Ibu
- 
-(g/gendong
-	:ARG0 (i/ibu
-		:name ( r / rusdi ))
-	:ARG1 (a/adik))
+( g / gendong-01
+	:ARG0 ( i / ibu )
+	:ARG1 ( a / adik ) )
 
-# ::id 245
+# ::id 303
 # ::snt Ayah menjemput adik di sekolah hari ini
+( j / jemput-01
+	:ARG0 ( a / ayah )
+	:ARG1 ( a2 / adik )
+	:location ( s / sekolah )
+	:time ( h / hari
+		:mod ( i / ini) )
  
-(j/jemput
-	:ARG0 (a1/ayah)
-	:ARG1 (a2/adik)
-	:location (s/sekolah)
-	:time ( h / hari )
-)
- 
-# ::id 245
+# ::id 304
 # ::snt Adik dijemput ayah di sekolah hari ini
+( j / jemput-01
+	:ARG0 ( a / ayah )
+	:ARG1 ( a2 / adik )
+	:location ( s / sekolah )
+	:time ( h / hari
+		:mod ( i / ini) )
  
-(j/jemput
-	:ARG0 (a1/ayah)
-	:ARG1 (a2/adik)
-	:location (s/sekolah)
-	:time ( h / hari )
-)
- 
-# ::id 245
+# ::id 305
 # ::snt Kakak memilih pasangan minggu depan
-
-(p1/pilih
-	:ARG0 (k/kakak)
-	:ARG1 (p2/pasang)
-	:time( m / minggu 
-		:mod ( d / depan ))
-)
+( p / pilih-01
+	:ARG0 ( k / kakak ) 
+	:ARG1 ( p2 / pasangan )
+	:time ( m / minggu
+    :mod ( b / berikut ) ) ) )
  
-# ::id 245
+# ::id 306
 # ::snt Pasangan dipilih kakak minggu depan
+( p / pilih-01
+	:ARG0 ( k / kakak ) 
+	:ARG1 ( p2 / pasangan )
+	:time ( m / minggu
+    :mod ( b / berikut ) ) ) )
 
-(p1/pilih
-	:ARG0 (k/kakak)
-	:ARG1 (p2/pasang)
-	:time( m / minggu 
-		:mod ( d / depan ))
-)
