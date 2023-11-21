@@ -34,8 +34,10 @@
 # ::id 5
 # ::snt Ibuku seorang dosen
 ( d / dosen
-	:domain ( i / ibu
-		:poss ( a / aku ) ) )
+	:domain ( o / orang
+		:ARG0-of ( m2 / memiliki-peran-rel-91
+			:ARG1 ( a / aku )
+			:ARG2 ( i / ibu ) ) ) )
 
 # ::id 6
 # ::snt Dia Sedang berenang
@@ -57,14 +59,18 @@
 # ::id 8
 # ::snt Ibu Sedang menyapu halaman rumah
 ( s / sapu-01
-	:ARG0 ( i / ibu )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
 	:ARG1 ( h / halaman 
 		:part ( r / rumah ) ) )
 
 # ::id 9
 # ::snt Ayah sedang membajak padi di sawah
 ( b / bajak-01
-	:ARG0 ( a / ayah )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
 	:ARG1 ( p / padi )
 	:location ( s / sawah ) )
 
@@ -101,16 +107,20 @@
 # ::id 13
 # ::snt Ayah sekarang ada di pasar
 ( t / terletak-di-91
-	:ARG1 ( a / ayah )
+	:ARG1 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
 	:ARG2 ( p / pasar )
 	:time ( s / sekarang ) )
 
 # ::id 14
 # ::snt Kakak masih bermain bola
 ( m / main-01
-	:ARG0 ( k / kakak )
+	:ARG0 ( o / orang
+		:ARG0-of ( m2 / memiliki-peran-rel-91
+			:ARG2 ( k / kakak ) ) )
 	:ARG1 ( b / bola )
-	:mod ( m2 / masih ) )
+	:mod ( m3 / masih ) )
 
 # ::id 15
 # ::snt Ada banyak tikus di rumah
@@ -122,10 +132,13 @@
 # ::id 16
 # ::snt Adik menangis keras karena jatuh
 ( t / tangis-01
-	:ARG0 ( a / adik )
-	:mod ( k / keras )
-	:cause ( j / jatuh-01
-		:ARG1 a ) )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) )
+	:manner ( k / keras )
+	:ARG1-of ( s / sebab-01
+		:ARG0 ( j / jatuh-01
+			:ARG1 o ) ) )
 
 # ::id 17
 # ::snt Hotel itu sangat mewah seperti istana
@@ -203,8 +216,10 @@
 		:name ( n / nama
 			:op1 "Satria" ) )
 	:ARG1 ( u / uang )
-	:ARG2 ( a / adik
-		:poss o ) )
+	:ARG2 ( o2 / orang
+		:ARG0-of ( m2 / memiliki-peran-rel-91
+			:ARG1 o
+			:ARG2 ( a / adik ) ) ) )
 
 # ::id 24
 # ::snt Pak Hasan bertemu dengan Pak Husen kemarin di halte bus
@@ -302,14 +317,20 @@
 # ::id 32
 # ::snt Paman mengunjungi ayah kemarin
 ( k / kunjung-01
-	:ARG0 ( p / paman )
-	:ARG1 ( a / ayah )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( p / paman ) ) )
+	:ARG1 ( o2 / orang
+		:ARG0-of ( m2 / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
 	:time ( k2 / kemarin ) )
 
 # ::id 33
 # ::snt Ibu menjahit baju dengan rapi
 ( j / jahit-01 
-	:ARG0 ( i / ibu )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
 	:ARG1 ( b / baju )
 	:manner ( r / rapi ) )
 
@@ -331,15 +352,19 @@
 		:name ( n / nama
 			:op1 "Dina" ) )
 	:ARG1 ( p / puisi )
-	:beneficiary ( i / ibu )
+	:beneficiary ( o2 / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
 	:location ( b / beranda )
 	:time ( e / entitas-tanggal
-		:dayperiod ( m / malam ) ) )
+		:dayperiod ( m2 / malam ) ) )
 
 # ::id 36
 # ::snt Adik berlari dengan sangat kencang
 ( l / lari-01 
-	:ARG0 ( a / adik )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) )
 	:manner ( c / cepat
 		:degree ( s / sangat ) ) )
 
@@ -435,7 +460,7 @@
 			:op1 "Dudung" ) )
 	:location ( s / sekolah
 		:poss o )
-	:manner ( s2 / sering
+	:frequency ( s2 / sering
 		:degree ( s3 / sangat ) ) )
 
 # ::id 47
@@ -449,9 +474,11 @@
 # ::id 48
 # ::snt Ibuku adalah orang yang sangat penyayang
 ( s / sayang-01
-	:ARG0 ( i / ibu
-		:poss ( a / aku ) )
-	:manner ( s2 / sering
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG1 ( a / aku )
+			:ARG2 ( i / ibu ) ) )
+	:frequency ( s2 / sering
 		:degree ( s3 / sangat ) ) )
 
 # ::id 49
@@ -476,20 +503,24 @@
 			:op1 "Jesica" ) )
 	:ARG1 ( k / kopi
 		:ARG1-of ( s2 / suka-01
-			:ARG0 ( a / ayah
-				:poss o ) ) ) )
+			:ARG0 ( o2 / orang
+				:ARG0-of ( m / memiliki-peran-rel-91
+					:ARG1 o
+					:ARG2 ( a / ayah ) ) ) ) ) )
 
 # ::id 51
 # ::snt Paman membelikanku novel Sherlock Holmes edisi terbaru
 ( b / beli-01
-	:ARG0 ( p / paman )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( p / paman ) ) )
 	:ARG1 ( n / novel
 		:wiki -
 		:name ( n2 / nama
 			:op1 "Sherlock"
 			:op2 "Holmes" )
 		:ARG1-of ( t / terbit-03
-			:ARG1-of ( m / memiliki-derajat-91
+			:ARG1-of ( m2 / memiliki-derajat-91
 				:ARG2 ( b2 / baru )
 				:ARG3 ( p2 / paling ) ) ) )
 	:ARG2 ( a / aku ) )
@@ -514,17 +545,21 @@
 		:name ( n / nama
 			:op1 "Weni" ) )
 	:ARG1 ( p / panen-01
-		:ARG0 ( a / ayah
-			:poss o )
+		:ARG0 ( o2 / orang
+			:ARG0-of ( m / memiliki-peran-rel-91
+				:ARG1 o
+				:ARG2 ( a / ayah ) ) )
 		:ARG1 ( a2 / apel )
 		:location ( k / kebun
-			:poss a ) )
+			:poss o2 ) )
 	:location k )
 
 # ::id 54
 # ::snt Ibu sedang mencuci piring
 ( c / cuci-01
-	:ARG0 ( i / ibu )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
 	:ARG1 ( p / piring ) )
 
 # ::id 55
@@ -600,12 +635,14 @@
 # ::id 62
 # ::snt Adik membaca buku pelajaran di kamarnya
 ( b / baca-01
-	:ARG0 ( a / adik )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) )
 	:ARG1 ( b2 / buku
 		:ARG0-of ( a2 / ajar-01
-			:ARG2 a ) )
+			:ARG2 o ) )
 	:location ( k / kamar
-		:poss a ) )
+		:poss o ) )
 
 # ::id 63
 # ::snt Nur menemukan barang itu di jalan
@@ -695,10 +732,12 @@
 		:wiki -
 		:name ( n / nama
 			:op1 "Rina" ) )
-	:ARG1 ( t2 / teman
-		:poss o )
+	:ARG1 ( o2 / orang
+			:ARG0-of ( m / memiliki-peran-rel-91
+				:ARG1 o
+				:ARG2 ( t2 / teman ) ) )
 	:time ( e / entitas-tanggal
-		:dayperiod ( m / malam
+		:dayperiod ( m2 / malam
 			:mod ( k / kemarin ) ) ) )
 
 # ::id 71
@@ -791,7 +830,9 @@
 # ::id 79
 # ::snt Ibu sedang mencuci pakaian
 ( c / cuci-01
-	:ARG0 ( i / ibu )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
 	:ARG1 ( s / sesuatu
 		:ARG1-of ( p / pakai-01 ) ) )
 
@@ -876,11 +917,13 @@
 # ::id 88
 # ::snt Ibu Budi sedang menanak nasi
 ( n / nanak-01
-	:ARG0 ( i / ibu
-		:poss ( o / orang
-			:wiki -
-			:name ( n2 / nama
-				:op1 "Budi" ) ) )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG1 ( o2 / orang
+				:wiki -
+				:name ( n2 / nama
+					:op1 "Budi" ) )
+			:ARG2 ( i / ibu ) ) )
 	:ARG1 ( n3 / nasi ) )
 
 # ::id 89
@@ -925,7 +968,9 @@
 # ::id 93
 # ::snt Ibu memasak di dapur
 ( m / masak-01
-	:ARG0 ( i / ibu )
+	:ARG0 ( o / orang
+		:ARG0-of ( m2 / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
 	:location ( d / dapur ) )
 
 # ::id 94
@@ -1026,13 +1071,17 @@
 # ::id 104
 # ::snt Ibu menyiram bunga
 ( s / siram-01
-	:ARG0 ( i / ibu )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
 	:ARG1 ( b / bunga ) )
 
 # ::id 105
 # ::snt Bunga disiram ibu
 ( s / siram-01
-	:ARG0 ( i / ibu )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
 	:ARG1 ( b / bunga ) )
 
 # ::id 106
@@ -1053,7 +1102,9 @@
 # ::id 107
 # ::snt Ayah membaca koran Waspada di teras rumah
 ( b / baca-01
-	:ARG0 ( a / ayah )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
 	:ARG1 ( k / koran
 		:wiki "Waspada_(surat_kabar)"
 		:name ( n / nama
@@ -1075,7 +1126,9 @@
 # ::id 109
 # ::snt Adik membaca buku ensiklopedia
 ( b / baca-01
-	:ARG0 ( a / adik )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) )
 	:ARG1 ( b2 / buku
 		:mod ( e / ensiklopedia ) ) )
 
@@ -1102,8 +1155,10 @@
 # ::id 112
 # ::snt Ibu menjahit baju sekolahku yang robek
 ( j / jahit-01
-	:ARG0 ( i / ibu
-		:poss ( a / aku ) )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG1 ( a / aku )
+			:ARG2 ( i / ibu ) ) )
 	:ARG1 ( b / baju
 		:mod ( s / sekolah )
 		:poss a
@@ -1201,7 +1256,9 @@
 # ::id 120
 # ::snt Ibu sedang mencuci piring
 ( c / cuci-01
-	:ARG0 ( i / ibu )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
 	:ARG1 ( p / piring ) )
 
 # ::id 121
@@ -1273,7 +1330,9 @@
 # ::id 128
 # ::snt Ayah sedang ada di kantor
 ( t / terletak-di-91
-	:ARG1 ( a / ayah )
+	:ARG1 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
 	:ARG2 ( k / kantor ) )
 
 # ::id 129
@@ -1356,11 +1415,13 @@
 		:ARG0 o )
 	:time ( t2 / telah
 		:op1 ( b / beli-01
-			:ARG0 ( a / ayah )
+			:ARG0 ( o2 / orang
+				:ARG0-of ( m / memiliki-peran-rel-91
+					:ARG2 ( a / ayah ) ) )
 			:ARG1 ( s / sesuatu
-				:ARG1-of ( m / main-01 )
-				:mod ( b2 / baru )
-				:beneficiary o ) ) ) )
+				:ARG1-of ( m2 / main-01 )
+				:mod ( b2 / baru ) )
+			:ARG2 o ) ) )
 
 # ::id 135
 # ::snt Ibu Guru mengatakan bahwa kami harus menyelesaikan soal ujian hari ini
@@ -1394,7 +1455,9 @@
 			:op1 "Pak"
 			:op2 "Gilang" ) )
 	:ARG1 ( p / pulang-01
-		:ARG0 ( a / ayah )
+		:ARG0 ( o2 / orang
+			:ARG0-of ( m / memiliki-peran-rel-91
+				:ARG2 ( a / ayah ) ) )
 		:time ( l / lusa ) ) )
 
 # ::id 138
@@ -1442,7 +1505,9 @@
 	:destination ( r / rumah )
 	:time ( s / sejak
 		:op1 ( m / marah-01
-			:ARG0 ( a / ayah )
+			:ARG0 ( o2 / orang
+				:ARG0-of ( m2 / memiliki-peran-rel-91
+					:ARG2 ( a / ayah ) ) )
 			:ARG1 o ) ) )
 
 # ::id 143
@@ -1461,11 +1526,15 @@
 # ::id 144
 # ::snt Ibu memberikan sup hangat ketika Ayah pulang
 ( b / beri-01
-	:ARG0 ( i / ibu )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
 	:ARG1 ( s / sup
 		:ARG1-of ( h / hangat-01 ) )
 	:time ( p / pulang-01
-		:ARG0 ( a / ayah ) ) )
+		:ARG0 ( o2 / orang
+				:ARG0-of ( m2 / memiliki-peran-rel-91
+					:ARG2 ( a / ayah ) ) ) ) )
 
 # ::id 145
 # ::snt Pak Tono tahu bahwa komputernya rusak
@@ -1490,10 +1559,12 @@
 # ::id 147
 # ::snt Ayah pergi ke kantor minggu kemarin
 ( p / pergi-01
-	:ARG0 ( a / ayah )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
 	:destination ( k / kantor )
 	:time ( e / entitas-tanggal
-		:weekday ( m / minggu
+		:weekday ( m2 / minggu
 			:mod ( k2 / kemarin ) ) ) )
 
 # ::id 148
@@ -1607,13 +1678,15 @@
 # ::id 158
 # ::snt Ayah pergi memancing seminggu sekali
 ( p / pergi-01
-	:ARG0 ( a / ayah )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
 	:purpose ( p2 / pancing-01
 		:ARG0 a )
 	:frequency ( e / entitas-laju-91
 		:ARG2 ( e2 / entitas-temporal
 			:quant 1
-			:unit ( m / minggu ) ) ) )
+			:unit ( m2 / minggu ) ) ) )
 
 # ::id 159
 # ::snt Pak Ilham masuk kantor
@@ -1673,7 +1746,9 @@
 # ::id 165
 # ::snt Kakek menanam cabe di halaman tadi pagi
 ( t / tanam-01
-	:ARG0 ( k / kakek )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( k / kakek ) ) )
 	:ARG1 ( c / cabai )
 	:location ( h / halaman )
 	:time ( e / entitas-tanggal
@@ -1785,18 +1860,20 @@
 # ::id 175
 # ::snt Waktu kecil andre diajak ibu pergi mengunjungi nenek
 ( a / ajak-01
-	:ARG0 ( i / ibu )
-	:ARG1 ( o / orang
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
+	:ARG1 ( o2 / orang
 		:wiki -
 		:name ( n / nama
 			:op1 "Andre" ) )
 	:ARG2 ( p / pergi-01
-		:ARG0 o
+		:ARG0 o2
 		:purpose ( k / kunjung-01
-			:ARG0 o
+			:ARG0 o2
 			:ARG1 ( n2 / nenek ) ) )
-	:time ( m / muda-01
-		:ARG1 o ) )
+	:time ( m2 / muda-01
+		:ARG1 o2 ) )
 
 # ::id 176
 # ::snt Saat hujan, udara terasa lebih panas
@@ -1925,7 +2002,9 @@
 # ::id 189
 # ::snt Adik kuliah di jakarta tahun depan
 ( k / kuliah-01
-	:ARG0 ( a / adik )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) )
 	:location ( k2 / kota
 		:wiki "Daerah_Khusus_Ibukota_Jakarta"
 		:name ( n / nama
@@ -1999,7 +2078,7 @@
 # ::id 196
 # ::snt Saya bertemu Pak Ilham besok
 ( t / temu-01
-	:ARG0 ( s / saya )
+	:ARG0 ( a / aku )
 	:ARG1 ( o / orang
 		:wiki -
 		:name ( n / nama
@@ -2038,15 +2117,19 @@
 # ::id 200
 # ::snt Paman kembali ke rumah tadi malam
 ( k / kembali-01
-	:ARG0 ( p / paman )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( p / paman ) ) )
 	:destination ( r / rumah )
-	:time ( m / malam
+	:time ( m2 / malam
 		:mod ( k2 / kemarin ) ) )
 
 # ::id 201
 # ::snt Ayah berangkat ke kantor pukul tujuh pagi
 ( p / pergi-02
-	:ARG0 ( a / ayah )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
 	:destination ( k / kantor )
 	:time ( e / entitas-tanggal
    		:time "7:00" ) )
@@ -2093,27 +2176,31 @@
 # ::id 206
 # ::snt Ayah membaca koran Tempo di teras 
 ( b / baca-01
-	:ARG0 ( k / koran
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
+	:ARG1 ( k / koran
 		:wiki "Koran_Tempo"
 		:name ( n / nama
 			:op1 "Tempo" ) )
-	:ARG1 ( a / ayah )
 	:location ( t / teras ) )
 
 # ::id 207
 # ::snt Koran Tempo dibaca Ayah di teras 
 ( b / baca-01
-	:ARG0 ( k / koran
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
+	:ARG1 ( k / koran
 		:wiki "Koran_Tempo"
 		:name ( n / nama
 			:op1 "Tempo" ) )
-	:ARG1 ( a / ayah )
 	:location ( t / teras ) )
 
 # ::id 208
 # ::snt Saya mengantuk
 ( k / kantuk-01
-	:ARG0 ( s / saya ) )
+	:ARG0 ( a / aku ) )
 
 # ::id 209
 # ::snt Guru memberikan tugas
@@ -2170,35 +2257,43 @@
 # ::id 215
 # ::snt Ibu Budi memasak nasi kuning
 ( m / masak-01
-	:ARG0 ( i / ibu
-		:poss ( o / orang
-			:wiki - 
-			:name ( n / nama
-				:op1 "Budi" ) ) )
+	:ARG0 ( o / orang
+		:ARG0-of ( m2 / memiliki-peran-rel-91
+			:ARG1 ( o2 / orang
+				:wiki - 
+				:name ( n / nama
+					:op1 "Budi" ) )
+			:ARG2 ( i / ibu ) ) )
 	:ARG1 ( n2 / nasi
 		:mod ( k / kuning ) ) )
 
 # ::id 216
 # ::snt Nasi kuning dimasak Ibu Budi
 ( m / masak-01
-	:ARG0 ( i / ibu
-		:poss ( o / orang
-			:wiki - 
-			:name ( n / nama
-				:op1 "Budi" ) ) )
+	:ARG0 ( o / orang
+		:ARG0-of ( m2 / memiliki-peran-rel-91
+			:ARG1 ( o2 / orang
+				:wiki - 
+				:name ( n / nama
+					:op1 "Budi" ) )
+			:ARG2 ( i / ibu ) ) )
 	:ARG1 ( n2 / nasi
 		:mod ( k / kuning ) ) )
 
 # ::id 217
 # ::snt Adik meminjam buku
 ( p / pinjam-01
-	:ARG0 ( a / adik )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) )
 	:ARG1 ( b / buku ) )
 
 # ::id 218
 # ::snt Buku dipinjam Adik
 ( p / pinjam-01
-	:ARG0 ( a / adik )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) )
 	:ARG1 ( b / buku ) )
 
 # ::id 219
@@ -2271,13 +2366,17 @@
 # ::id 227
 # ::snt Ayah membawa piala
 ( b / bawa-01
-	:ARG0 ( a / ayah )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
 	:ARG1 ( p / piala ) )
 
 # ::id 228
 # ::snt Piala dibawa ayah
 ( b / bawa-01
-	:ARG0 ( a / ayah )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
 	:ARG1 ( p / piala ) )
 
 # ::id 229
@@ -2379,13 +2478,17 @@
 # ::id 237
 # ::snt Kakak membersihkan dapur
 ( b / bersih-01
-	:ARG0 ( k / kakak )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( k / kakak ) ) )
 	:ARG1 ( d / dapur ) )
 
 # ::id 238
 # ::snt Dapur dibersikan kakak
 ( b / bersih-01
-	:ARG0 ( k / kakak )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( k / kakak ) ) )
 	:ARG1 ( d / dapur ) )
 
 # ::id 239
@@ -2509,14 +2612,18 @@
 # ::id 253
 # ::snt Adik menonton kartun di televisi
 ( t / tonton-01
-	:ARG0 ( a / adik )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) )
 	:ARG1 ( k / kartun )
 	:medium ( t2 / televisi ) )
 
 # ::id 254
 # ::snt Kartun ditonton adik di televisi
 ( t / tonton-01
-	:ARG0 ( a / adik )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) )
 	:ARG1 ( k / kartun )
 	:medium ( t2 / televisi ) )
 
@@ -2583,13 +2690,17 @@
 # ::id 261
 # ::snt Kakak mengepel lantai
 ( p / pel-01
-	:ARG0 ( k / kakak )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( k / kakak ) ) )
 	:ARG1 ( l / lantai ) )
 
 # ::id 262
 # ::snt Lantai dipel kakak
 ( p / pel-01
-	:ARG0 ( k / kakak )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( k / kakak ) ) )
 	:ARG1 ( l / lantai ) )
 
 # ::id 263
@@ -2615,37 +2726,49 @@
 # ::id 265
 # ::snt Ayah mencari nafkah
 ( c / cari-01
-	:ARG0 ( a / ayah )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
 	:ARG1 ( n / nafkah ) )
 
 # ::id 266
 # ::snt Nafkah dicari ayah
 ( c / cari-01
-	:ARG0 ( a / ayah )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
 	:ARG1 ( n / nafkah ) )
 
 # ::id 267
 # ::snt Ibu memberi makan
 ( b / beri-01
-	:ARG0 ( i / ibu )  
-	:ARG1 ( m / makan ) )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
+	:ARG1 ( m2 / makan ) )
 
 # ::id 268
 # ::snt Makan diberi ibu
 ( b / beri-01
-	:ARG0 ( i / ibu )  
-	:ARG1 ( m / makan ) )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( i / ibu ) ) )
+	:ARG1 ( m2 / makan ) )
 
 # ::id 269
 # ::snt Adik menerima uang
 ( t / terima-01
-	:ARG0 ( a / adik )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) )
 	:ARG1 ( u / uang ) )
 
 # ::id 270
 # ::snt Uang diterima adik
 ( t / terima-01
-	:ARG0 ( a / adik )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) )
 	:ARG1 ( u / uang ) )
 
 # ::id 271
@@ -2721,7 +2844,9 @@
 # ::id 279
 # ::snt Adik melompat
 ( l / lompat-01
-	:ARG0 ( a / adik ) )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) ) )
 
 # ::id 280
 # ::snt Pengacara membela tersangka di pengadilan
@@ -2806,20 +2931,24 @@
 # ::id 290
 # ::snt Gubernur Anis menyampaikan keluhan
 ( b / beri-01
-	:ARG0 ( g / gubernur
+	:ARG0 ( o / orang
 		:wiki "Anies_Baswedan"
 		:name ( n / nama
-			:op1 "Anis" ) )
+			:op1 "Anis" )
+		:ARG0-of ( m / memiliki-peran-org-91
+			:ARG2 ( g / gubernur ) ) )
 	:ARG1 ( s / sesuatu
 		:ARG1-of ( k / keluh-01 ) ) )
 
 # ::id 291
 # ::snt Keluhan disampaikan Gubernur Anis
 ( b / beri-01
-	:ARG0 ( g / gubernur
+	:ARG0 ( o / orang
 		:wiki "Anies_Baswedan"
 		:name ( n / nama
-			:op1 "Anis" ) )
+			:op1 "Anis" )
+		:ARG0-of ( m / memiliki-peran-org-91
+			:ARG2 ( g / gubernur ) ) )
 	:ARG1 ( s / sesuatu
 		:ARG1-of ( k / keluh-01 ) ) )
 
@@ -2923,19 +3052,27 @@
 		:name ( n / nama
 			:op1 "Ibu"
 			:op2 "Rusdi" ) )
-	:ARG1 ( a / adik ) )
+	:ARG1 ( o2 / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) ) )
 
 # ::id 302
 # ::snt Adik digendong Ibu
 ( g / gendong-01
 	:ARG0 ( i / ibu )
-	:ARG1 ( a / adik ) )
+	:ARG1 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / adik ) ) ) )
 
 # ::id 303
 # ::snt Ayah menjemput adik di sekolah hari ini
 ( j / jemput-01
-	:ARG0 ( a / ayah )
-	:ARG1 ( a2 / adik )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
+	:ARG1 ( o2 / orang
+		:ARG0-of ( m2 / memiliki-peran-rel-91
+			:ARG2 ( a2 / adik ) ) )
 	:location ( s / sekolah )
 	:time ( h / hari
 		:mod ( i / ini ) ) )
@@ -2943,8 +3080,12 @@
 # ::id 304
 # ::snt Adik dijemput ayah di sekolah hari ini
 ( j / jemput-01
-	:ARG0 ( a / ayah )
-	:ARG1 ( a2 / adik )
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( a / ayah ) ) )
+	:ARG1 ( o2 / orang
+		:ARG0-of ( m2 / memiliki-peran-rel-91
+			:ARG2 ( a2 / adik ) ) )
 	:location ( s / sekolah )
 	:time ( h / hari
 		:mod ( i / ini ) ) )
@@ -2952,15 +3093,19 @@
 # ::id 305
 # ::snt Kakak memilih pasangan minggu depan
 ( p / pilih-01
-	:ARG0 ( k / kakak ) 
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( k / kakak ) ) )
 	:ARG1 ( p2 / pasangan )
-	:time ( m / minggu
+	:time ( m2 / minggu
     	:mod ( b / berikut ) ) )
 
 # ::id 306
 # ::snt Pasangan dipilih kakak minggu depan
 ( p / pilih-01
-	:ARG0 ( k / kakak ) 
+	:ARG0 ( o / orang
+		:ARG0-of ( m / memiliki-peran-rel-91
+			:ARG2 ( k / kakak ) ) )
 	:ARG1 ( p2 / pasangan )
-	:time ( m / minggu
+	:time ( m2 / minggu
     	:mod ( b / berikut ) ) )
